@@ -1,0 +1,8 @@
+C:\Users\Carlos Ferreira\Desktop\.net projeto\ProjetoDeBloco\CasaDaHorta\CasaDaHora.Domain\bin\Debug\netcoreapp3.1\CasaDaHora.Domain.deps.json
+C:\Users\Carlos Ferreira\Desktop\.net projeto\ProjetoDeBloco\CasaDaHorta\CasaDaHora.Domain\bin\Debug\netcoreapp3.1\CasaDaHora.Domain.dll
+C:\Users\Carlos Ferreira\Desktop\.net projeto\ProjetoDeBloco\CasaDaHorta\CasaDaHora.Domain\bin\Debug\netcoreapp3.1\CasaDaHora.Domain.pdb
+C:\Users\Carlos Ferreira\Desktop\.net projeto\ProjetoDeBloco\CasaDaHorta\CasaDaHora.Domain\obj\Debug\netcoreapp3.1\CasaDaHora.Domain.AssemblyInfoInputs.cache
+C:\Users\Carlos Ferreira\Desktop\.net projeto\ProjetoDeBloco\CasaDaHorta\CasaDaHora.Domain\obj\Debug\netcoreapp3.1\CasaDaHora.Domain.AssemblyInfo.cs
+C:\Users\Carlos Ferreira\Desktop\.net projeto\ProjetoDeBloco\CasaDaHorta\CasaDaHora.Domain\obj\Debug\netcoreapp3.1\CasaDaHora.Domain.dll
+C:\Users\Carlos Ferreira\Desktop\.net projeto\ProjetoDeBloco\CasaDaHorta\CasaDaHora.Domain\obj\Debug\netcoreapp3.1\CasaDaHora.Domain.pdb
+C:\Users\Carlos Ferreira\Desktop\.net projeto\ProjetoDeBloco\CasaDaHorta\CasaDaHora.Domain\obj\Debug\netcoreapp3.1\CasaDaHora.Domain.csprojAssemblyReference.cache

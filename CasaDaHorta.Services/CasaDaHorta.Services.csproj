@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CasaDaHora.Domain\CasaDaHora.Domain.csproj" />
+    <ProjectReference Include="..\CasaDaHorta.Repository\CasaDaHorta.Repository.csproj" />
+  </ItemGroup>
+
+</Project>
