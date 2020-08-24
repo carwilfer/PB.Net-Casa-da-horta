@@ -8,11 +8,15 @@ using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.EntityFrameworkCore;
-using CasaDaHorta.Web.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using CasaDaHora.Domain.Account;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using CasaDaHora.Domain.Account.Repository;
+using CasaDaHorta.Repository.AccountRepository;
+using CasaDaHorta.Services.Account;
+using CasaDaHorta.Repository.Context;
 
 namespace CasaDaHorta.Web
 {
@@ -28,13 +32,34 @@ namespace CasaDaHorta.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(
-                    Configuration.GetConnectionString("DefaultConnection")));
+            services.AddTransient<IAccountRepository, AccountRepository>();
+            
+            //Controla a parte de conta e perfil
+            services.AddTransient<IUserStore<Account>, AccountRepository>();
+            services.AddTransient<IRoleStore<Profile>, ProfileRepository>();
 
-            services.AddIdentity<Account, IdentityRole>()
-                .AddEntityFrameworkStores<ApplicationDbContext>()
-                .AddDefaultTokenProviders();
+            //Gestor de login com sucesso ou não
+            services.AddTransient<IAccountIdentityManager, AccountIdentityManager>();
+            //Gerenciador de conta (cria edita ou deleta)
+            services.AddTransient<IAccountService, AccountService>();
+
+            services.AddDbContext<CasaDaHortaContext>(opt =>
+            {
+                opt.UseSqlServer(Configuration.GetConnectionString("CasaDaHortaConnection"));
+            });
+
+            //controlador de conta e perfil
+            services.AddIdentity<Account, Profile>()
+                    .AddDefaultTokenProviders();
+
+            //para conseguir criar um login e acesso
+            services.ConfigureApplicationCookie(options =>
+            {
+                options.LoginPath = "/Account/Login";
+                options.AccessDeniedPath = "/Account/AccessDenied";
+                options.ExpireTimeSpan = TimeSpan.FromMinutes(60);
+                options.ReturnUrlParameter = CookieAuthenticationDefaults.ReturnUrlParameter;
+            });
 
             services.AddControllersWithViews();
 

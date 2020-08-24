@@ -5,4 +5,4 @@ C:\Users\Carlos Ferreira\Desktop\.net projeto\ProjetoDeBloco\CasaDaHorta\CasaDaH
 C:\Users\Carlos Ferreira\Desktop\.net projeto\ProjetoDeBloco\CasaDaHorta\CasaDaHora.Domain\obj\Debug\netcoreapp3.1\CasaDaHora.Domain.AssemblyInfo.cs
 C:\Users\Carlos Ferreira\Desktop\.net projeto\ProjetoDeBloco\CasaDaHorta\CasaDaHora.Domain\obj\Debug\netcoreapp3.1\CasaDaHora.Domain.dll
 C:\Users\Carlos Ferreira\Desktop\.net projeto\ProjetoDeBloco\CasaDaHorta\CasaDaHora.Domain\obj\Debug\netcoreapp3.1\CasaDaHora.Domain.pdb
-C:\Users\Carlos Ferreira\Desktop\.net projeto\ProjetoDeBloco\CasaDaHorta\CasaDaHora.Domain\obj\Debug\netcoreapp3.1\CasaDaHora.Domain.csprojAssemblyReference.cache
+C:\Users\Carlos Ferreira\Desktop\.net projeto\ProjetoDeBloco\CasaDaHorta\CasaDaHora.Domain\obj\Debug\netcoreapp3.1\CasaDaHora.Domain.csproj.CoreCompileInputs.cache
