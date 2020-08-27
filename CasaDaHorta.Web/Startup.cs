@@ -35,8 +35,8 @@ namespace CasaDaHorta.Web
             services.AddTransient<IAccountRepository, AccountRepository>();
             
             //Controla a parte de conta e perfil
-            services.AddTransient<IUserStore<Account>, AccountRepository>();
-            services.AddTransient<IRoleStore<Profile>, ProfileRepository>();
+            services.AddTransient<IUserStore<Accounty>, AccountRepository>();
+            services.AddTransient<IRoleStore<Role>, RoleRepository>();
 
             //Gestor de login com sucesso ou não
             services.AddTransient<IAccountIdentityManager, AccountIdentityManager>();
@@ -49,7 +49,7 @@ namespace CasaDaHorta.Web
             });
 
             //controlador de conta e perfil
-            services.AddIdentity<Account, Profile>()
+            services.AddIdentity<Accounty, Role>()
                     .AddDefaultTokenProviders();
 
             //para conseguir criar um login e acesso

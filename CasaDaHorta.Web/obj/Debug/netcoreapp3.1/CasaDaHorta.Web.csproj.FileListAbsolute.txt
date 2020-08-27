@@ -101,9 +101,13 @@ C:\Users\Carlos Ferreira\Desktop\.net projeto\ProjetoDeBloco\CasaDaHorta\CasaDaH
 C:\Users\Carlos Ferreira\Desktop\.net projeto\ProjetoDeBloco\CasaDaHorta\CasaDaHorta.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authorization.dll
 C:\Users\Carlos Ferreira\Desktop\.net projeto\ProjetoDeBloco\CasaDaHorta\CasaDaHorta.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Metadata.dll
 C:\Users\Carlos Ferreira\Desktop\.net projeto\ProjetoDeBloco\CasaDaHorta\CasaDaHorta.Web\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
-C:\Users\Carlos Ferreira\Desktop\.net projeto\ProjetoDeBloco\CasaDaHorta\CasaDaHorta.Web\obj\Debug\netcoreapp3.1\CasaDaHorta.Web.csproj.CoreCompileInputs.cache
-C:\Users\Carlos Ferreira\Desktop\.net projeto\ProjetoDeBloco\CasaDaHorta\CasaDaHorta.Web\obj\Debug\netcoreapp3.1\CasaDaHorta.Web.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\Carlos Ferreira\Desktop\.net projeto\ProjetoDeBloco\CasaDaHorta\CasaDaHorta.Web\obj\Debug\netcoreapp3.1\CasaDaHorta.Web.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Carlos Ferreira\Desktop\.net projeto\ProjetoDeBloco\CasaDaHorta\CasaDaHorta.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Configuration.dll
 C:\Users\Carlos Ferreira\Desktop\.net projeto\ProjetoDeBloco\CasaDaHorta\CasaDaHorta.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Console.dll
 C:\Users\Carlos Ferreira\Desktop\.net projeto\ProjetoDeBloco\CasaDaHorta\CasaDaHorta.Web\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+C:\Users\Carlos Ferreira\Desktop\.net projeto\ProjetoDeBloco\CasaDaHorta\CasaDaHorta.Web\bin\Debug\netcoreapp3.1\Twilio.dll
+C:\Users\Carlos Ferreira\Desktop\.net projeto\ProjetoDeBloco\CasaDaHorta\CasaDaHorta.Web\obj\Debug\netcoreapp3.1\CasaDaHorta.Web.csproj.CoreCompileInputs.cache
+C:\Users\Carlos Ferreira\Desktop\.net projeto\ProjetoDeBloco\CasaDaHorta\CasaDaHorta.Web\obj\Debug\netcoreapp3.1\CasaDaHorta.Web.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Carlos Ferreira\Desktop\.net projeto\ProjetoDeBloco\CasaDaHorta\CasaDaHorta.Web\bin\Debug\netcoreapp3.1\IdentityServer3.dll
+C:\Users\Carlos Ferreira\Desktop\.net projeto\ProjetoDeBloco\CasaDaHorta\CasaDaHorta.Web\bin\Debug\netcoreapp3.1\Owin.dll
+C:\Users\Carlos Ferreira\Desktop\.net projeto\ProjetoDeBloco\CasaDaHorta\CasaDaHorta.Web\obj\Debug\netcoreapp3.1\CasaDaHorta.Web.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Carlos Ferreira\Desktop\.net projeto\ProjetoDeBloco\CasaDaHorta\CasaDaHorta.Web\obj\Debug\netcoreapp3.1\Razor\Views\Account\Login.cshtml.g.cs

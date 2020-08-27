@@ -5,12 +5,13 @@ using System;
 using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
+using Twilio.Rest;
 
 namespace CasaDaHorta.Repository.Mapping
 {
-    public class AccountMap : IEntityTypeConfiguration<Account>
+    public class AccountMap : IEntityTypeConfiguration<Accounty>
     {
-        public void Configure(EntityTypeBuilder<Account> builder)
+        public void Configure(EntityTypeBuilder<Accounty> builder)
         {
             builder.ToTable("Account");
             builder.HasKey(x => x.Id);
@@ -21,7 +22,7 @@ namespace CasaDaHorta.Repository.Mapping
             builder.Property(x => x.Email).IsRequired().HasMaxLength(250);
             builder.Property(x => x.Password).IsRequired().HasMaxLength(150);
             //direção de navegação unica
-            builder.HasMany(x => x.Profiles).WithOne();
+            builder.HasOne(x => x.Role).WithMany(x => x.Accounts);
 
         }
     }

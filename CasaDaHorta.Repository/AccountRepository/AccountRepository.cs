@@ -1,69 +1,122 @@
 ﻿using CasaDaHora.Domain.Account;
 using CasaDaHora.Domain.Account.Repository;
+using CasaDaHorta.Repository.Context;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using Twilio.Rest;
 
 namespace CasaDaHorta.Repository.AccountRepository
 {
-    public class AccountRepository : IUserStore<Account>, IAccountRepository
+    public class AccountRepository : IUserStore<Accounty>, IAccountRepository
     {
-        public Task<IdentityResult> CreateAsync(Account user, CancellationToken cancellationToken)
+        private bool disposedValue;
+        private CasaDaHortaContext Context { get; set; }
+        public AccountRepository(CasaDaHortaContext casaDaHortaContext)
         {
-            throw new NotImplementedException();
+            this.Context = casaDaHortaContext;
+        }
+        public async Task<IdentityResult> CreateAsync(Accounty user, CancellationToken cancellationToken)
+        {
+            this.Context.Accounts.Add(user);
+            await this.Context.SaveChangesAsync();
+            return IdentityResult.Success;
         }
 
-        public Task<IdentityResult> DeleteAsync(Account user, CancellationToken cancellationToken)
+        public async Task<IdentityResult> DeleteAsync(Accounty user, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            this.Context.Accounts.Remove(user);
+            await this.Context.SaveChangesAsync();
+            return IdentityResult.Success;
         }
 
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!disposedValue)
+            {
+                if (disposing)
+                {
+                    // TODO: dispose managed state (managed objects)
+                }
+
+                // TODO: free unmanaged resources (unmanaged objects) and override finalizer
+                // TODO: set large fields to null
+                disposedValue = true;
+            }
+        }
         public void Dispose()
         {
-            throw new NotImplementedException();
+            Dispose(disposing: true);
+            GC.SuppressFinalize(this);
+        }
+        public Task<Accounty> FindByIdAsync(string userId, CancellationToken cancellationToken)
+        {
+            return this.Context.Accounts.FirstOrDefaultAsync(x => x.Id == new Guid(userId));
         }
 
-        public Task<Account> FindByIdAsync(string userId, CancellationToken cancellationToken)
+        public Task<Accounty> FindByNameAsync(string normalizedUserName, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            return this.Context.Accounts.FirstOrDefaultAsync(x => x.Nome == normalizedUserName);
         }
 
-        public Task<Account> FindByNameAsync(string normalizedUserName, CancellationToken cancellationToken)
+        public Task<string> GetNormalizedUserNameAsync(Accounty user, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            return Task.FromResult(user.SobreNome);
         }
 
-        public Task<string> GetNormalizedUserNameAsync(Account user, CancellationToken cancellationToken)
+        public Task<string> GetUserIdAsync(Accounty user, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            return Task.FromResult(user.Id.ToString());
         }
 
-        public Task<string> GetUserIdAsync(Account user, CancellationToken cancellationToken)
+        public Task<string> GetUserNameAsync(Accounty user, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            return Task.FromResult(user.SobreNome.ToString());
         }
 
-        public Task<string> GetUserNameAsync(Account user, CancellationToken cancellationToken)
+        public Task SetNormalizedUserNameAsync(Accounty user, string normalizedName, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            user.SobreNome = normalizedName;
+            return Task.CompletedTask;
         }
 
-        public Task SetNormalizedUserNameAsync(Account user, string normalizedName, CancellationToken cancellationToken)
+        public Task SetUserNameAsync(Accounty user, string userName, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            user.SobreNome = userName;
+            return Task.CompletedTask;
         }
 
-        public Task SetUserNameAsync(Account user, string userName, CancellationToken cancellationToken)
+        public async Task<IdentityResult> UpdateAsync(Accounty user, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            //não guarda em memória
+            var accountToUpdate = await this.Context.Accounts.AsNoTracking().FirstOrDefaultAsync(x => x.Id == user.Id);
+            //faz atualização
+            accountToUpdate = user;
+            this.Context.Entry(accountToUpdate).State = EntityState.Modified;
+            //adiciona pra fazer memória novamente
+            this.Context.Accounts.Add(accountToUpdate);
+            //Manda as atualizações para BD
+            await this.Context.SaveChangesAsync();
+
+            return IdentityResult.Success;
+        }
+        public Task<Accounty> GetAccountByEmailPassword(string email, string password)
+        {
+            return Task.FromResult(this.Context.Accounts
+                                               .Include(x => x.Role)
+                                               .FirstOrDefault(x => x.Email == email && x.Password == password));
+        }
+        public Task<Accounty> GetAccountByUserNamePassword(string sobreNome, string password)
+        {
+            return Task.FromResult(this.Context.Accounts
+                                               .Include(x => x.Role)
+                                               .FirstOrDefault(x => x.SobreNome == sobreNome && x.Password == password));
         }
 
-        public Task<IdentityResult> UpdateAsync(Account user, CancellationToken cancellationToken)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

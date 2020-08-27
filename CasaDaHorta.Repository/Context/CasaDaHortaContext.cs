@@ -10,8 +10,8 @@ namespace CasaDaHorta.Repository.Context
 {
     public class CasaDaHortaContext : DbContext
     {
-        public DbSet<Account> Accounts { get; set; }
-        public DbSet<Profile> Profiles { get; set; }
+        public DbSet<Accounty> Accounts { get; set; }
+        public DbSet<Role> Profiles { get; set; }
 
         public static readonly ILoggerFactory _loggerFactory
                 = LoggerFactory.Create(builder => { builder.AddConsole(); });
@@ -27,7 +27,7 @@ namespace CasaDaHorta.Repository.Context
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new AccountMap());
-            modelBuilder.ApplyConfiguration(new ProfileMap());
+            modelBuilder.ApplyConfiguration(new RoleMap());
             base.OnModelCreating(modelBuilder);
         }
     }
