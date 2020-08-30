@@ -1,21 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Carlos Ferreira\\Desktop\\.net projeto\\ProjetoDeBloco\\CasaDaHorta\\CasaDaHorta.Repository\\CasaDaHorta.Repository.csproj": {}
+    "C:\\Users\\Carlos\\Source\\Repos\\PB.Net-Casa-da-horta\\CasaDaHorta.Repository\\CasaDaHorta.Repository.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Carlos Ferreira\\Desktop\\.net projeto\\ProjetoDeBloco\\CasaDaHorta\\CasaDaHora.Domain\\CasaDaHora.Domain.csproj": {
+    "C:\\Users\\Carlos\\Source\\Repos\\PB.Net-Casa-da-horta\\CasaDaHora.Domain\\CasaDaHora.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Carlos Ferreira\\Desktop\\.net projeto\\ProjetoDeBloco\\CasaDaHorta\\CasaDaHora.Domain\\CasaDaHora.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Carlos\\Source\\Repos\\PB.Net-Casa-da-horta\\CasaDaHora.Domain\\CasaDaHora.Domain.csproj",
         "projectName": "CasaDaHora.Domain",
-        "projectPath": "C:\\Users\\Carlos Ferreira\\Desktop\\.net projeto\\ProjetoDeBloco\\CasaDaHorta\\CasaDaHora.Domain\\CasaDaHora.Domain.csproj",
-        "packagesPath": "C:\\Users\\Carlos Ferreira\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Carlos Ferreira\\Desktop\\.net projeto\\ProjetoDeBloco\\CasaDaHorta\\CasaDaHora.Domain\\obj\\",
+        "projectPath": "C:\\Users\\Carlos\\Source\\Repos\\PB.Net-Casa-da-horta\\CasaDaHora.Domain\\CasaDaHora.Domain.csproj",
+        "packagesPath": "C:\\Users\\Carlos\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Carlos\\Source\\Repos\\PB.Net-Casa-da-horta\\CasaDaHora.Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Carlos Ferreira\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Carlos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -85,18 +89,22 @@
         }
       }
     },
-    "C:\\Users\\Carlos Ferreira\\Desktop\\.net projeto\\ProjetoDeBloco\\CasaDaHorta\\CasaDaHorta.CrossCutting\\CasaDaHorta.CrossCutting.csproj": {
+    "C:\\Users\\Carlos\\Source\\Repos\\PB.Net-Casa-da-horta\\CasaDaHorta.CrossCutting\\CasaDaHorta.CrossCutting.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Carlos Ferreira\\Desktop\\.net projeto\\ProjetoDeBloco\\CasaDaHorta\\CasaDaHorta.CrossCutting\\CasaDaHorta.CrossCutting.csproj",
+        "projectUniqueName": "C:\\Users\\Carlos\\Source\\Repos\\PB.Net-Casa-da-horta\\CasaDaHorta.CrossCutting\\CasaDaHorta.CrossCutting.csproj",
         "projectName": "CasaDaHorta.CrossCutting",
-        "projectPath": "C:\\Users\\Carlos Ferreira\\Desktop\\.net projeto\\ProjetoDeBloco\\CasaDaHorta\\CasaDaHorta.CrossCutting\\CasaDaHorta.CrossCutting.csproj",
-        "packagesPath": "C:\\Users\\Carlos Ferreira\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Carlos Ferreira\\Desktop\\.net projeto\\ProjetoDeBloco\\CasaDaHorta\\CasaDaHorta.CrossCutting\\obj\\",
+        "projectPath": "C:\\Users\\Carlos\\Source\\Repos\\PB.Net-Casa-da-horta\\CasaDaHorta.CrossCutting\\CasaDaHorta.CrossCutting.csproj",
+        "packagesPath": "C:\\Users\\Carlos\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Carlos\\Source\\Repos\\PB.Net-Casa-da-horta\\CasaDaHorta.CrossCutting\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Carlos Ferreira\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Carlos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -166,18 +174,22 @@
         }
       }
     },
-    "C:\\Users\\Carlos Ferreira\\Desktop\\.net projeto\\ProjetoDeBloco\\CasaDaHorta\\CasaDaHorta.Repository\\CasaDaHorta.Repository.csproj": {
+    "C:\\Users\\Carlos\\Source\\Repos\\PB.Net-Casa-da-horta\\CasaDaHorta.Repository\\CasaDaHorta.Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Carlos Ferreira\\Desktop\\.net projeto\\ProjetoDeBloco\\CasaDaHorta\\CasaDaHorta.Repository\\CasaDaHorta.Repository.csproj",
+        "projectUniqueName": "C:\\Users\\Carlos\\Source\\Repos\\PB.Net-Casa-da-horta\\CasaDaHorta.Repository\\CasaDaHorta.Repository.csproj",
         "projectName": "CasaDaHorta.Repository",
-        "projectPath": "C:\\Users\\Carlos Ferreira\\Desktop\\.net projeto\\ProjetoDeBloco\\CasaDaHorta\\CasaDaHorta.Repository\\CasaDaHorta.Repository.csproj",
-        "packagesPath": "C:\\Users\\Carlos Ferreira\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Carlos Ferreira\\Desktop\\.net projeto\\ProjetoDeBloco\\CasaDaHorta\\CasaDaHorta.Repository\\obj\\",
+        "projectPath": "C:\\Users\\Carlos\\Source\\Repos\\PB.Net-Casa-da-horta\\CasaDaHorta.Repository\\CasaDaHorta.Repository.csproj",
+        "packagesPath": "C:\\Users\\Carlos\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Carlos\\Source\\Repos\\PB.Net-Casa-da-horta\\CasaDaHorta.Repository\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Carlos Ferreira\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Carlos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -189,11 +201,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\Carlos Ferreira\\Desktop\\.net projeto\\ProjetoDeBloco\\CasaDaHorta\\CasaDaHora.Domain\\CasaDaHora.Domain.csproj": {
-                "projectPath": "C:\\Users\\Carlos Ferreira\\Desktop\\.net projeto\\ProjetoDeBloco\\CasaDaHorta\\CasaDaHora.Domain\\CasaDaHora.Domain.csproj"
+              "C:\\Users\\Carlos\\Source\\Repos\\PB.Net-Casa-da-horta\\CasaDaHora.Domain\\CasaDaHora.Domain.csproj": {
+                "projectPath": "C:\\Users\\Carlos\\Source\\Repos\\PB.Net-Casa-da-horta\\CasaDaHora.Domain\\CasaDaHora.Domain.csproj"
               },
-              "C:\\Users\\Carlos Ferreira\\Desktop\\.net projeto\\ProjetoDeBloco\\CasaDaHorta\\CasaDaHorta.CrossCutting\\CasaDaHorta.CrossCutting.csproj": {
-                "projectPath": "C:\\Users\\Carlos Ferreira\\Desktop\\.net projeto\\ProjetoDeBloco\\CasaDaHorta\\CasaDaHorta.CrossCutting\\CasaDaHorta.CrossCutting.csproj"
+              "C:\\Users\\Carlos\\Source\\Repos\\PB.Net-Casa-da-horta\\CasaDaHorta.CrossCutting\\CasaDaHorta.CrossCutting.csproj": {
+                "projectPath": "C:\\Users\\Carlos\\Source\\Repos\\PB.Net-Casa-da-horta\\CasaDaHorta.CrossCutting\\CasaDaHorta.CrossCutting.csproj"
               }
             }
           }
