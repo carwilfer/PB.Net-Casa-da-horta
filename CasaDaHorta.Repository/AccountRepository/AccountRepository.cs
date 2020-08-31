@@ -66,7 +66,7 @@ namespace CasaDaHorta.Repository.AccountRepository
 
         public Task<string> GetNormalizedUserNameAsync(Accounty user, CancellationToken cancellationToken)
         {
-            return Task.FromResult(user.SobreNome);
+            return Task.FromResult(user.UserName);
         }
 
         public Task<string> GetUserIdAsync(Accounty user, CancellationToken cancellationToken)
@@ -76,18 +76,18 @@ namespace CasaDaHorta.Repository.AccountRepository
 
         public Task<string> GetUserNameAsync(Accounty user, CancellationToken cancellationToken)
         {
-            return Task.FromResult(user.SobreNome.ToString());
+            return Task.FromResult(user.UserName.ToString());
         }
 
         public Task SetNormalizedUserNameAsync(Accounty user, string normalizedName, CancellationToken cancellationToken)
         {
-            user.SobreNome = normalizedName;
+            user.UserName = normalizedName;
             return Task.CompletedTask;
         }
 
         public Task SetUserNameAsync(Accounty user, string userName, CancellationToken cancellationToken)
         {
-            user.SobreNome = userName;
+            user.UserName = userName;
             return Task.CompletedTask;
         }
 
@@ -111,11 +111,11 @@ namespace CasaDaHorta.Repository.AccountRepository
                                                .Include(x => x.Role)
                                                .FirstOrDefault(x => x.Email == email && x.Password == password));
         }
-        public Task<Accounty> GetAccountByUserNamePassword(string sobreNome, string password)
+        public Task<Accounty> GetAccountByUserNamePassword(string userName, string password)
         {
             return Task.FromResult(this.Context.Accounts
                                                .Include(x => x.Role)
-                                               .FirstOrDefault(x => x.SobreNome == sobreNome && x.Password == password));
+                                               .FirstOrDefault(x => x.UserName == userName && x.Password == password));
         }
 
     }

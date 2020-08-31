@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RQQrzNmM2FrCDWzCaRskvWIy8PjKhErENpuYwCHWYrTGPDqRK1uC14vGhHv0uOL2J18VXTDG9eCv85Q4/YMW2w==",
+  "dgSpecHash": "ynv0KBZrIH/48QuCGDVR7z+3GvL1E6MyJuXxRPk7PHgq9YXrYEg6XrpZ3xktN1pQTr3zNdPumqYeawEscfNSdw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Carlos\\Source\\Repos\\PB.Net-Casa-da-horta\\CasaDaHora.Domain\\CasaDaHora.Domain.csproj",
+  "projectFilePath": "C:\\Users\\Carlos\\Desktop\\Projeto de bloco\\Casa-da-horta\\PB.Net-Casa-da-horta\\CasaDaHora.Domain\\CasaDaHora.Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Carlos\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Carlos\\.nuget\\packages\\microsoft.aspnetcore.authentication.core\\2.2.0\\microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512",

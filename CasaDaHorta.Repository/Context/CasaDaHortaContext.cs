@@ -15,7 +15,7 @@ namespace CasaDaHorta.Repository.Context
 
         public static readonly ILoggerFactory _loggerFactory
                 = LoggerFactory.Create(builder => { builder.AddConsole(); });
-        public CasaDaHortaContext(DbContextOptions<CasaDaHortaContext>options) : base (options)
+        public CasaDaHortaContext(DbContextOptions<CasaDaHortaContext> options) : base(options)
         {
 
         }

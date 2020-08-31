@@ -1949,7 +1949,10 @@
         },
         "runtime": {
           "bin/placeholder/CasaDaHora.Domain.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       },
       "CasaDaHorta.CrossCutting/1.0.0": {
         "type": "project",
@@ -1967,7 +1970,10 @@
         },
         "runtime": {
           "bin/placeholder/CasaDaHorta.CrossCutting.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },
@@ -6766,11 +6772,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Carlos\\Source\\Repos\\PB.Net-Casa-da-horta\\CasaDaHorta.Repository\\CasaDaHorta.Repository.csproj",
+      "projectUniqueName": "C:\\Users\\Carlos\\Desktop\\Projeto de bloco\\Casa-da-horta\\PB.Net-Casa-da-horta\\CasaDaHorta.Repository\\CasaDaHorta.Repository.csproj",
       "projectName": "CasaDaHorta.Repository",
-      "projectPath": "C:\\Users\\Carlos\\Source\\Repos\\PB.Net-Casa-da-horta\\CasaDaHorta.Repository\\CasaDaHorta.Repository.csproj",
+      "projectPath": "C:\\Users\\Carlos\\Desktop\\Projeto de bloco\\Casa-da-horta\\PB.Net-Casa-da-horta\\CasaDaHorta.Repository\\CasaDaHorta.Repository.csproj",
       "packagesPath": "C:\\Users\\Carlos\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Carlos\\Source\\Repos\\PB.Net-Casa-da-horta\\CasaDaHorta.Repository\\obj\\",
+      "outputPath": "C:\\Users\\Carlos\\Desktop\\Projeto de bloco\\Casa-da-horta\\PB.Net-Casa-da-horta\\CasaDaHorta.Repository\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -6790,11 +6796,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\Carlos\\Source\\Repos\\PB.Net-Casa-da-horta\\CasaDaHora.Domain\\CasaDaHora.Domain.csproj": {
-              "projectPath": "C:\\Users\\Carlos\\Source\\Repos\\PB.Net-Casa-da-horta\\CasaDaHora.Domain\\CasaDaHora.Domain.csproj"
+            "C:\\Users\\Carlos\\Desktop\\Projeto de bloco\\Casa-da-horta\\PB.Net-Casa-da-horta\\CasaDaHora.Domain\\CasaDaHora.Domain.csproj": {
+              "projectPath": "C:\\Users\\Carlos\\Desktop\\Projeto de bloco\\Casa-da-horta\\PB.Net-Casa-da-horta\\CasaDaHora.Domain\\CasaDaHora.Domain.csproj"
             },
-            "C:\\Users\\Carlos\\Source\\Repos\\PB.Net-Casa-da-horta\\CasaDaHorta.CrossCutting\\CasaDaHorta.CrossCutting.csproj": {
-              "projectPath": "C:\\Users\\Carlos\\Source\\Repos\\PB.Net-Casa-da-horta\\CasaDaHorta.CrossCutting\\CasaDaHorta.CrossCutting.csproj"
+            "C:\\Users\\Carlos\\Desktop\\Projeto de bloco\\Casa-da-horta\\PB.Net-Casa-da-horta\\CasaDaHorta.CrossCutting\\CasaDaHorta.CrossCutting.csproj": {
+              "projectPath": "C:\\Users\\Carlos\\Desktop\\Projeto de bloco\\Casa-da-horta\\PB.Net-Casa-da-horta\\CasaDaHorta.CrossCutting\\CasaDaHorta.CrossCutting.csproj"
             }
           }
         }

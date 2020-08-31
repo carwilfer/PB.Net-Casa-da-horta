@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "59k+gxgugVfJZmsckR0qMx2P+va6XBLKee4zx1R+y2dmLYTDq9FDP/znvQuvKM4QYRyxId5BV5XDYdVxjfAtKQ==",
+  "dgSpecHash": "ws8SiGGHUIQOP+V1F9h91RfF6hejdyR4gBDTqFXG2M+aCpkD6Wm1PkMnLX54lk0RMrdOlAX60x+ufWQmObS4jw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Carlos\\Source\\Repos\\PB.Net-Casa-da-horta\\CasaDaHorta.Tests\\CasaDaHorta.Tests.csproj",
+  "projectFilePath": "C:\\Users\\Carlos\\Desktop\\Projeto de bloco\\Casa-da-horta\\PB.Net-Casa-da-horta\\CasaDaHorta.Tests\\CasaDaHorta.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Carlos\\.nuget\\packages\\coverlet.collector\\1.3.0\\coverlet.collector.1.3.0.nupkg.sha512",
     "C:\\Users\\Carlos\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",

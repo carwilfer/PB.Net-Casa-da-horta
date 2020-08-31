@@ -33,7 +33,7 @@ namespace CasaDaHorta.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddTransient<IAccountRepository, AccountRepository>();
-            
+
             //Controla a parte de conta e perfil
             services.AddTransient<IUserStore<Accounty>, AccountRepository>();
             services.AddTransient<IRoleStore<Role>, RoleRepository>();

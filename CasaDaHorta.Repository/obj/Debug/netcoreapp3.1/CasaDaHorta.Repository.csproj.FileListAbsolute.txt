@@ -12,3 +12,17 @@ C:\Users\Carlos Ferreira\Desktop\.net projeto\ProjetoDeBloco\CasaDaHorta\CasaDaH
 C:\Users\Carlos Ferreira\Desktop\.net projeto\ProjetoDeBloco\CasaDaHorta\CasaDaHorta.Repository\obj\Debug\netcoreapp3.1\CasaDaHorta.Repository.dll
 C:\Users\Carlos Ferreira\Desktop\.net projeto\ProjetoDeBloco\CasaDaHorta\CasaDaHorta.Repository\obj\Debug\netcoreapp3.1\CasaDaHorta.Repository.pdb
 C:\Users\Carlos Ferreira\Desktop\.net projeto\ProjetoDeBloco\CasaDaHorta\CasaDaHorta.Repository\obj\Debug\netcoreapp3.1\CasaDaHorta.Repository.csproj.CoreCompileInputs.cache
+C:\Users\Carlos\Desktop\Projeto de bloco\Casa-da-horta\PB.Net-Casa-da-horta\CasaDaHorta.Repository\bin\Debug\netcoreapp3.1\CasaDaHorta.Repository.deps.json
+C:\Users\Carlos\Desktop\Projeto de bloco\Casa-da-horta\PB.Net-Casa-da-horta\CasaDaHorta.Repository\bin\Debug\netcoreapp3.1\CasaDaHorta.Repository.dll
+C:\Users\Carlos\Desktop\Projeto de bloco\Casa-da-horta\PB.Net-Casa-da-horta\CasaDaHorta.Repository\bin\Debug\netcoreapp3.1\CasaDaHorta.Repository.pdb
+C:\Users\Carlos\Desktop\Projeto de bloco\Casa-da-horta\PB.Net-Casa-da-horta\CasaDaHorta.Repository\bin\Debug\netcoreapp3.1\CasaDaHora.Domain.dll
+C:\Users\Carlos\Desktop\Projeto de bloco\Casa-da-horta\PB.Net-Casa-da-horta\CasaDaHorta.Repository\bin\Debug\netcoreapp3.1\CasaDaHorta.CrossCutting.dll
+C:\Users\Carlos\Desktop\Projeto de bloco\Casa-da-horta\PB.Net-Casa-da-horta\CasaDaHorta.Repository\bin\Debug\netcoreapp3.1\CasaDaHora.Domain.pdb
+C:\Users\Carlos\Desktop\Projeto de bloco\Casa-da-horta\PB.Net-Casa-da-horta\CasaDaHorta.Repository\bin\Debug\netcoreapp3.1\CasaDaHorta.CrossCutting.pdb
+C:\Users\Carlos\Desktop\Projeto de bloco\Casa-da-horta\PB.Net-Casa-da-horta\CasaDaHorta.Repository\obj\Debug\netcoreapp3.1\CasaDaHorta.Repository.csprojAssemblyReference.cache
+C:\Users\Carlos\Desktop\Projeto de bloco\Casa-da-horta\PB.Net-Casa-da-horta\CasaDaHorta.Repository\obj\Debug\netcoreapp3.1\CasaDaHorta.Repository.AssemblyInfoInputs.cache
+C:\Users\Carlos\Desktop\Projeto de bloco\Casa-da-horta\PB.Net-Casa-da-horta\CasaDaHorta.Repository\obj\Debug\netcoreapp3.1\CasaDaHorta.Repository.AssemblyInfo.cs
+C:\Users\Carlos\Desktop\Projeto de bloco\Casa-da-horta\PB.Net-Casa-da-horta\CasaDaHorta.Repository\obj\Debug\netcoreapp3.1\CasaDaHorta.Repository.csproj.CoreCompileInputs.cache
+C:\Users\Carlos\Desktop\Projeto de bloco\Casa-da-horta\PB.Net-Casa-da-horta\CasaDaHorta.Repository\obj\Debug\netcoreapp3.1\CasaDaHorta.Repository.csproj.CopyComplete
+C:\Users\Carlos\Desktop\Projeto de bloco\Casa-da-horta\PB.Net-Casa-da-horta\CasaDaHorta.Repository\obj\Debug\netcoreapp3.1\CasaDaHorta.Repository.dll
+C:\Users\Carlos\Desktop\Projeto de bloco\Casa-da-horta\PB.Net-Casa-da-horta\CasaDaHorta.Repository\obj\Debug\netcoreapp3.1\CasaDaHorta.Repository.pdb

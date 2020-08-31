@@ -7,3 +7,12 @@ C:\Users\Carlos Ferreira\Desktop\.net projeto\ProjetoDeBloco\CasaDaHorta\CasaDaH
 C:\Users\Carlos Ferreira\Desktop\.net projeto\ProjetoDeBloco\CasaDaHorta\CasaDaHorta.CrossCutting\obj\Debug\netcoreapp3.1\CasaDaHorta.CrossCutting.pdb
 C:\Users\Carlos Ferreira\Desktop\.net projeto\ProjetoDeBloco\CasaDaHorta\CasaDaHorta.CrossCutting\obj\Debug\netcoreapp3.1\CasaDaHorta.CrossCutting.csproj.CoreCompileInputs.cache
 C:\Users\Carlos Ferreira\Desktop\.net projeto\ProjetoDeBloco\CasaDaHorta\CasaDaHorta.CrossCutting\obj\Debug\netcoreapp3.1\CasaDaHorta.CrossCutting.csprojAssemblyReference.cache
+C:\Users\Carlos\Desktop\Projeto de bloco\Casa-da-horta\PB.Net-Casa-da-horta\CasaDaHorta.CrossCutting\bin\Debug\netcoreapp3.1\CasaDaHorta.CrossCutting.deps.json
+C:\Users\Carlos\Desktop\Projeto de bloco\Casa-da-horta\PB.Net-Casa-da-horta\CasaDaHorta.CrossCutting\bin\Debug\netcoreapp3.1\CasaDaHorta.CrossCutting.dll
+C:\Users\Carlos\Desktop\Projeto de bloco\Casa-da-horta\PB.Net-Casa-da-horta\CasaDaHorta.CrossCutting\bin\Debug\netcoreapp3.1\CasaDaHorta.CrossCutting.pdb
+C:\Users\Carlos\Desktop\Projeto de bloco\Casa-da-horta\PB.Net-Casa-da-horta\CasaDaHorta.CrossCutting\obj\Debug\netcoreapp3.1\CasaDaHorta.CrossCutting.csprojAssemblyReference.cache
+C:\Users\Carlos\Desktop\Projeto de bloco\Casa-da-horta\PB.Net-Casa-da-horta\CasaDaHorta.CrossCutting\obj\Debug\netcoreapp3.1\CasaDaHorta.CrossCutting.AssemblyInfoInputs.cache
+C:\Users\Carlos\Desktop\Projeto de bloco\Casa-da-horta\PB.Net-Casa-da-horta\CasaDaHorta.CrossCutting\obj\Debug\netcoreapp3.1\CasaDaHorta.CrossCutting.AssemblyInfo.cs
+C:\Users\Carlos\Desktop\Projeto de bloco\Casa-da-horta\PB.Net-Casa-da-horta\CasaDaHorta.CrossCutting\obj\Debug\netcoreapp3.1\CasaDaHorta.CrossCutting.csproj.CoreCompileInputs.cache
+C:\Users\Carlos\Desktop\Projeto de bloco\Casa-da-horta\PB.Net-Casa-da-horta\CasaDaHorta.CrossCutting\obj\Debug\netcoreapp3.1\CasaDaHorta.CrossCutting.dll
+C:\Users\Carlos\Desktop\Projeto de bloco\Casa-da-horta\PB.Net-Casa-da-horta\CasaDaHorta.CrossCutting\obj\Debug\netcoreapp3.1\CasaDaHorta.CrossCutting.pdb

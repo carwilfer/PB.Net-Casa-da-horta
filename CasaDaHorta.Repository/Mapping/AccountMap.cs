@@ -21,6 +21,7 @@ namespace CasaDaHorta.Repository.Mapping
             builder.Property(x => x.DataNascimento).IsRequired();
             builder.Property(x => x.Email).IsRequired().HasMaxLength(250);
             builder.Property(x => x.Password).IsRequired().HasMaxLength(150);
+            builder.Property(x => x.UserName).HasMaxLength(50);
             //direção de navegação unica
             builder.HasOne(x => x.Role).WithMany(x => x.Accounts);
 

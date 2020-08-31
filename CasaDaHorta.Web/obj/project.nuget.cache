@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mk0FZOGalB3KKPgckbfd5+tR81x3ol5r/RkpqS0b2udiSxW2hc5Ep1s6bVfEtxzjT4xsHaAUC/xxm1CTQa5Q8g==",
+  "dgSpecHash": "hSt+U/865PXffKiby8o1RlSfUSGnD0CmWcfblhTuDK2dpHV4mI3Gy9lNazbHAFKo6f0NX9lhLoJKLC6CGAVxzQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Carlos\\Source\\Repos\\PB.Net-Casa-da-horta\\CasaDaHorta.Web\\CasaDaHorta.Web.csproj",
+  "projectFilePath": "C:\\Users\\Carlos\\Desktop\\Projeto de bloco\\Casa-da-horta\\PB.Net-Casa-da-horta\\CasaDaHorta.Web\\CasaDaHorta.Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Carlos\\.nuget\\packages\\identityserver3\\2.6.3\\identityserver3.2.6.3.nupkg.sha512",
     "C:\\Users\\Carlos\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",

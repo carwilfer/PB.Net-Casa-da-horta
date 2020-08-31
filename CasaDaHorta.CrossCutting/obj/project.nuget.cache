@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QPVhxkQ3bG9dr2Dk7SXmNCtSVl8xwzz7mtTmQGfxxuBb3v7Fw4tDs5JZLD6NW3pry3VZvbVBbWeuukwDnBBPuw==",
+  "dgSpecHash": "C/TiJiUu6JPHIEZupuleZZxx7emh06kzn+/dsdYWJ0RxfX3y8BU9Lk9hjWO4qlsCMzbGIdnMHoqAS5RmsmI0mA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Carlos\\Source\\Repos\\PB.Net-Casa-da-horta\\CasaDaHorta.CrossCutting\\CasaDaHorta.CrossCutting.csproj",
+  "projectFilePath": "C:\\Users\\Carlos\\Desktop\\Projeto de bloco\\Casa-da-horta\\PB.Net-Casa-da-horta\\CasaDaHorta.CrossCutting\\CasaDaHorta.CrossCutting.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Carlos\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Carlos\\.nuget\\packages\\microsoft.aspnetcore.authentication.core\\2.2.0\\microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512",
