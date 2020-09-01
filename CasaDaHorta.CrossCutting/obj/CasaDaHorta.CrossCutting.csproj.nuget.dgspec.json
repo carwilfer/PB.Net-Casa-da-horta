@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Carlos\\Desktop\\Projeto de bloco\\Casa-da-horta\\PB.Net-Casa-da-horta\\CasaDaHorta.CrossCutting\\CasaDaHorta.CrossCutting.csproj": {}
+    "C:\\Users\\Carlos\\Desktop\\Projeto de bloco\\PB.CasaDaHorta\\CasaDaHorta.CrossCutting\\CasaDaHorta.CrossCutting.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Carlos\\Desktop\\Projeto de bloco\\Casa-da-horta\\PB.Net-Casa-da-horta\\CasaDaHorta.CrossCutting\\CasaDaHorta.CrossCutting.csproj": {
+    "C:\\Users\\Carlos\\Desktop\\Projeto de bloco\\PB.CasaDaHorta\\CasaDaHorta.CrossCutting\\CasaDaHorta.CrossCutting.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Carlos\\Desktop\\Projeto de bloco\\Casa-da-horta\\PB.Net-Casa-da-horta\\CasaDaHorta.CrossCutting\\CasaDaHorta.CrossCutting.csproj",
+        "projectUniqueName": "C:\\Users\\Carlos\\Desktop\\Projeto de bloco\\PB.CasaDaHorta\\CasaDaHorta.CrossCutting\\CasaDaHorta.CrossCutting.csproj",
         "projectName": "CasaDaHorta.CrossCutting",
-        "projectPath": "C:\\Users\\Carlos\\Desktop\\Projeto de bloco\\Casa-da-horta\\PB.Net-Casa-da-horta\\CasaDaHorta.CrossCutting\\CasaDaHorta.CrossCutting.csproj",
+        "projectPath": "C:\\Users\\Carlos\\Desktop\\Projeto de bloco\\PB.CasaDaHorta\\CasaDaHorta.CrossCutting\\CasaDaHorta.CrossCutting.csproj",
         "packagesPath": "C:\\Users\\Carlos\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Carlos\\Desktop\\Projeto de bloco\\Casa-da-horta\\PB.Net-Casa-da-horta\\CasaDaHorta.CrossCutting\\obj\\",
+        "outputPath": "C:\\Users\\Carlos\\Desktop\\Projeto de bloco\\PB.CasaDaHorta\\CasaDaHorta.CrossCutting\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -42,6 +42,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Azure.Storage.Blobs": {
+              "target": "Package",
+              "version": "[12.5.1, )"
+            },
             "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.1.7, )"
@@ -53,6 +57,10 @@
             "Microsoft.AspNetCore.Mvc.Core": {
               "target": "Package",
               "version": "[2.2.5, )"
+            },
+            "Microsoft.Azure.Storage.Blob": {
+              "target": "Package",
+              "version": "[11.2.2, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",

@@ -17,6 +17,7 @@ using CasaDaHora.Domain.Account.Repository;
 using CasaDaHorta.Repository.AccountRepository;
 using CasaDaHorta.Services.Account;
 using CasaDaHorta.Repository.Context;
+using CasaDaHorta.CrossCutting.Storage;
 
 namespace CasaDaHorta.Web
 {
@@ -42,6 +43,10 @@ namespace CasaDaHorta.Web
             services.AddTransient<IAccountIdentityManager, AccountIdentityManager>();
             //Gerenciador de conta (cria edita ou deleta)
             services.AddTransient<IAccountService, AccountService>();
+            
+            services.AddTransient<AzureStorage>();
+            //este aqui busca a conection string do blob store do Azure
+            services.Configure<AzureStorageOptions>(Configuration.GetSection("Microsift.Storage"));
 
             services.AddDbContext<CasaDaHortaContext>(opt =>
             {

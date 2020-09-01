@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CasaDaHorta.CrossCutting.Storage;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -26,6 +27,9 @@ namespace CasaDaHorta.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddTransient<AzureStorage>();
+            //este aqui busca a conection string do blob store do Azure
+            services.Configure<AzureStorageOptions>(Configuration.GetSection("Microsift.Storage"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
