@@ -43,7 +43,8 @@ namespace CasaDaHorta.Web
             services.AddTransient<IAccountIdentityManager, AccountIdentityManager>();
             //Gerenciador de conta (cria edita ou deleta)
             services.AddTransient<IAccountService, AccountService>();
-            
+
+            //Azure Blob Storage Configuration
             services.AddTransient<AzureStorage>();
             //este aqui busca a conection string do blob store do Azure
             services.Configure<AzureStorageOptions>(Configuration.GetSection("Microsift.Storage"));

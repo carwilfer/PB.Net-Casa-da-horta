@@ -27,7 +27,9 @@
                 <li class="nav-item">
                     <a class="nav-link" asp-action="Report" asp-controller="Home">Relatórios</a>
                 </li>
-
+                <li class="nav-item">
+                    <a class="nav-link" asp-action="Index" asp-controller="Upload">Upload</a>
+                </li>
             </ul>
             <div class="navbar-text">
                 <img class="img-profile rounded-circle" src="https://robohash.org/@(this.User.Claims.First(x => x.Type == System.Security.Claims.ClaimTypes.NameIdentifier).Value)?size=30x30&bgset=bg1">
