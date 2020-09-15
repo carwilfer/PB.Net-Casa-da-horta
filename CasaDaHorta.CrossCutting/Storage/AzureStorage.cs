@@ -12,7 +12,6 @@ namespace CasaDaHorta.CrossCutting.Storage
     public class AzureStorage
     {
         private AzureStorageOptions Options { get; set; }
-
         private CloudBlobClient CloudBlobClient { get; set; }
         private CloudBlobDirectory ImagesDirectory { get; set; }
 

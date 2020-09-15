@@ -1,4 +1,6 @@
 ﻿using CasaDaHora.Domain.Account;
+using CasaDaHora.Domain.Comment;
+using CasaDaHora.Domain.Post;
 using CasaDaHorta.Repository.Mapping;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
@@ -12,6 +14,8 @@ namespace CasaDaHorta.Repository.Context
     {
         public DbSet<Accounty> Accounts { get; set; }
         public DbSet<Role> Profiles { get; set; }
+        public DbSet<Post> Post { get; set; }
+        public DbSet<Comment> Comment{ get; set; }
 
         public static readonly ILoggerFactory _loggerFactory
                 = LoggerFactory.Create(builder => { builder.AddConsole(); });

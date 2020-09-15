@@ -19,9 +19,9 @@ C:\Users\Carlos\Desktop\Projeto de bloco\Casa-da-horta\PB.Net-Casa-da-horta\Casa
 C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHora.Domain\bin\Debug\netcoreapp3.1\CasaDaHora.Domain.deps.json
 C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHora.Domain\bin\Debug\netcoreapp3.1\CasaDaHora.Domain.dll
 C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHora.Domain\bin\Debug\netcoreapp3.1\CasaDaHora.Domain.pdb
-C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHora.Domain\obj\Debug\netcoreapp3.1\CasaDaHora.Domain.csprojAssemblyReference.cache
 C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHora.Domain\obj\Debug\netcoreapp3.1\CasaDaHora.Domain.AssemblyInfoInputs.cache
 C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHora.Domain\obj\Debug\netcoreapp3.1\CasaDaHora.Domain.AssemblyInfo.cs
 C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHora.Domain\obj\Debug\netcoreapp3.1\CasaDaHora.Domain.csproj.CoreCompileInputs.cache
 C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHora.Domain\obj\Debug\netcoreapp3.1\CasaDaHora.Domain.dll
 C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHora.Domain\obj\Debug\netcoreapp3.1\CasaDaHora.Domain.pdb
+C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHora.Domain\obj\Debug\netcoreapp3.1\CasaDaHora.Domain.csprojAssemblyReference.cache
