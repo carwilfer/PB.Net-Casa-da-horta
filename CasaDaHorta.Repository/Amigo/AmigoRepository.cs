@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using Twilio.Rest.Api.V2010.Account.Usage.Record;
 
 namespace CasaDaHorta.Repository.Amigo
 {
@@ -119,6 +120,99 @@ namespace CasaDaHorta.Repository.Amigo
             await this.Context.SaveChangesAsync();
 
             return IdentityResult.Success;
+        }
+
+        public async Task CreateAmigo(AmigoDomain amigoDomain)
+        {
+            try
+            {
+                await Context.Amigos.AddAsync(amigoDomain);
+                Context.SaveChanges();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+        }
+
+        public void UpdateAmigo(AmigoDomain amigoDomain)
+        {
+            try
+            {
+                Context.Amigos.Update(amigoDomain);
+                Context.SaveChanges();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+        }
+
+        public async Task<AmigoDomain> GetByEmail(string email)
+        {
+            return await Context.Amigos.FirstOrDefaultAsync(user => user.Email == email);
+        }
+
+        public async Task<AmigoDomain> GetById(Guid id)
+        {
+            return await Context.Amigos.FirstOrDefaultAsync(user => user.Id == id);
+        }
+
+        public async Task<List<AmigoDomain>> GetAll()
+        {
+            return await  Context.Amigos.ToListAsync();
+        }
+
+        public async Task<List<AmigoSeguidorResponse>> GetAmigoDosAmigos(AmigoDomain amigoDomain)
+        {
+            amigoDomain.AmigosQueSeguem = await Context.AmigosDosAmigos.Where(x => x.AmigoDomainId == amigoDomain.Id).ToListAsync();
+
+            List<AmigoDosAmigos> amigosQueSeguem = new List<AmigoDosAmigos>();
+
+            foreach(AmigoSeguidorResponse x in amigoDomain.AmigosQueSeguem)
+            {
+                AmigoDomain amigoEncontrado = await Context.Amigos.FirstOrDefaultAsync(amigoDomain => amigoDomain.Id == x.AmigoDosAmigosId);
+                amigosQueSeguem.Add(new AmigoDosAmigos
+                {
+                    Id = amigoEncontrado.Id,
+                    Nome = amigoEncontrado.Nome,
+                    Sobrenome = amigoEncontrado.Sobrenome,
+                    Email = amigoEncontrado.Email,
+                    Datanascimento = amigoEncontrado.Datanascimento
+                });
+            }
+
+            return amigosQueSeguem;
+        }
+
+        public async Task AddFollower(AmigoDosAmigos amigoDosAmigos)
+        {
+            try
+            {
+                await Context.AmigosDosAmigos.AddAsync(amigoDosAmigos);
+                Context.SaveChanges();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+        }
+
+        public void RemoveFollower(AmigoDosAmigos amigoDosAmigos)
+        {
+            try
+            {
+                Context.AmigosDosAmigos.Remove(amigoDosAmigos);
+                Context.SaveChanges();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
         }
     }
 }

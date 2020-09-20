@@ -14,6 +14,8 @@ namespace CasaDaHorta.Repository.Context
     public class CasaDaHortaContext : DbContext
     {
         public DbSet<AmigoDomain> Amigos { get; set; }
+        public DbSet<AmigoDosAmigos> AmigosDosAmigos { get; set; }
+
         public DbSet<Accounty> Accounts { get; set; }
         public DbSet<RoleDomain> Profiles { get; set; }
         public DbSet<Post> Post { get; set; }
