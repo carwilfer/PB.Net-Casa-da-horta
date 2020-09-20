@@ -1,4 +1,5 @@
 ﻿using CasaDaHora.Domain.Account;
+using CasaDaHora.Domain.Post;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -10,6 +11,9 @@ namespace CasaDaHora.Domain.Comment
         public Guid Id { get; set; }
         public string Comentario { get; set; }
         public string Amigo { get; set; }
+
+        //public Post Posts { get; set; }
+        //public List<Post> posts { get; set; }
 
     }
 }

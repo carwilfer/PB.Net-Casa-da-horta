@@ -13,7 +13,8 @@ namespace CasaDaHorta.API.Controllers
     [ApiController]
     public class PostController : ControllerBase
     {
-        public IPostServices PostServices { get; }
+        public IPostServices PostServices { get; set; }
+       
         public PostController(IPostServices postServices)
         {
             PostServices = postServices;

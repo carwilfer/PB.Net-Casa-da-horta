@@ -1,4 +1,4 @@
-﻿using CasaDaHora.Domain.Account;
+﻿using CasaDaHora.Domain.Amigo;
 using CasaDaHorta.Repository.Context;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace CasaDaHorta.Repository.AccountRepository
 {
-    public class RoleRepository : IRoleStore<Role>
+    public class RoleRepository : IRoleStore<RoleDomain>
     {
         private bool disposedValue;
         private CasaDaHortaContext Context { get; set; }
@@ -19,14 +19,15 @@ namespace CasaDaHorta.Repository.AccountRepository
             this.Context = casaDaHortaContext;
         }
 
-        public async Task<IdentityResult> CreateAsync(Role role, CancellationToken cancellationToken)
+
+        public async Task<IdentityResult> CreateAsync(RoleDomain role, CancellationToken cancellationToken)
         {
             this.Context.Profiles.Add(role);
             await this.Context.SaveChangesAsync();
             return IdentityResult.Success;
         }
 
-        public async Task<IdentityResult> DeleteAsync(Role role, CancellationToken cancellationToken)
+        public async Task<IdentityResult> DeleteAsync(RoleDomain role, CancellationToken cancellationToken)
         {
             this.Context.Profiles.Remove(role);
             await this.Context.SaveChangesAsync();
@@ -49,48 +50,49 @@ namespace CasaDaHorta.Repository.AccountRepository
         }
         public void Dispose()
         {
+            // Do not change this code. Put cleanup code in 'Dispose(bool disposing)' method
             Dispose(disposing: true);
             GC.SuppressFinalize(this);
         }
 
-        public async Task<Role> FindByIdAsync(string roleId, CancellationToken cancellationToken)
+        public async Task<RoleDomain> FindByIdAsync(string roleId, CancellationToken cancellationToken)
         {
             return await this.Context.Profiles.FirstOrDefaultAsync(x => x.Id == new Guid(roleId));
         }
 
-        public async Task<Role> FindByNameAsync(string normalizedRoleName, CancellationToken cancellationToken)
+        public async Task<RoleDomain> FindByNameAsync(string normalizedRoleName, CancellationToken cancellationToken)
         {
             return await this.Context.Profiles.FirstOrDefaultAsync(x => x.Nome == normalizedRoleName);
         }
 
-        public Task<string> GetNormalizedRoleNameAsync(Role role, CancellationToken cancellationToken)
+        public Task<string> GetNormalizedRoleNameAsync(RoleDomain role, CancellationToken cancellationToken)
         {
             return Task.FromResult(role.Nome);
         }
 
-        public Task<string> GetRoleIdAsync(Role role, CancellationToken cancellationToken)
+        public Task<string> GetRoleIdAsync(RoleDomain role, CancellationToken cancellationToken)
         {
             return Task.FromResult(role.Id.ToString());
         }
 
-        public Task<string> GetRoleNameAsync(Role role, CancellationToken cancellationToken)
+        public Task<string> GetRoleNameAsync(RoleDomain role, CancellationToken cancellationToken)
         {
             return Task.FromResult(role.Nome);
         }
 
-        public Task SetNormalizedRoleNameAsync(Role role, string normalizedName, CancellationToken cancellationToken)
+        public Task SetNormalizedRoleNameAsync(RoleDomain role, string normalizedName, CancellationToken cancellationToken)
         {
             role.Nome = normalizedName;
             return Task.CompletedTask;
         }
 
-        public Task SetRoleNameAsync(Role role, string roleName, CancellationToken cancellationToken)
+        public Task SetRoleNameAsync(RoleDomain role, string roleName, CancellationToken cancellationToken)
         {
             role.Nome = roleName;
             return Task.CompletedTask;
         }
 
-        public async Task<IdentityResult> UpdateAsync(Role role, CancellationToken cancellationToken)
+        public async Task<IdentityResult> UpdateAsync(RoleDomain role, CancellationToken cancellationToken)
         {
             var roleToUpdate = await this.Context.Profiles.AsNoTracking().FirstOrDefaultAsync(x => x.Id == role.Id);
 
@@ -102,7 +104,5 @@ namespace CasaDaHorta.Repository.AccountRepository
 
             return IdentityResult.Success;
         }
-
     }
 }
-

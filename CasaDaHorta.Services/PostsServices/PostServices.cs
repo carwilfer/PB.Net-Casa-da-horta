@@ -13,7 +13,7 @@ namespace CasaDaHorta.Services.PostsServices
             PostRepository = postRepository;
         }
 
-        public IPostRepository PostRepository { get; }
+        public IPostRepository PostRepository { get; set;  }
 
         public PostCreateResult CriarPost(PostRequest postData)
         {

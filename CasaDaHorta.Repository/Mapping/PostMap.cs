@@ -20,8 +20,9 @@ namespace CasaDaHorta.Repository.Mapping
             builder.Property(x => x.Texto).IsRequired().HasMaxLength(250);
             builder.Property(x => x.UrlFoto).HasMaxLength(250);
 
-            builder.HasMany(x => Commentarios).WithOne(c => c.Post);
-            builder.HasOne(x => x.Account);
+            //builder.HasOne(x => x.Comments).WithMany(x => x.Comment);
+            //builder.HasMany(x => Comments).WithOne(c => c.Post);
+            builder.HasOne(x => x.Amigo);
         }
     }
 }

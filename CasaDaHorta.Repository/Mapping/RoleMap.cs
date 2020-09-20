@@ -1,4 +1,5 @@
 ﻿using CasaDaHora.Domain.Account;
+using CasaDaHora.Domain.Amigo;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
@@ -7,9 +8,9 @@ using System.Text;
 
 namespace CasaDaHorta.Repository.Mapping
 {
-    public class RoleMap : IEntityTypeConfiguration<Role>
+    public class RoleMap : IEntityTypeConfiguration<RoleDomain>
     {
-        public void Configure(EntityTypeBuilder<Role> builder)
+        public void Configure(EntityTypeBuilder<RoleDomain> builder)
         {
             builder.ToTable("Role");
             builder.HasKey(x => x.Id);

@@ -18,6 +18,7 @@ using CasaDaHorta.Repository.AccountRepository;
 using CasaDaHorta.Services.Account;
 using CasaDaHorta.Repository.Context;
 using CasaDaHorta.CrossCutting.Storage;
+using CasaDaHora.Domain.Amigo;
 
 namespace CasaDaHorta.Web
 {
@@ -37,7 +38,7 @@ namespace CasaDaHorta.Web
 
             //Controla a parte de conta e perfil
             services.AddTransient<IUserStore<Accounty>, AccountRepository>();
-            services.AddTransient<IRoleStore<Role>, RoleRepository>();
+            services.AddTransient<IRoleStore<RoleDomain>, RoleRepository>();
 
             //Gestor de login com sucesso ou não
             services.AddTransient<IAccountIdentityManager, AccountIdentityManager>();
@@ -45,14 +46,14 @@ namespace CasaDaHorta.Web
             services.AddTransient<IAccountService, AccountService>();
 
             //Azure Blob Storage Configuration
-            services.AddTransient<AzureStorage>();
+            //services.AddTransient<AzureStorage>();
             //este aqui busca a conection string do blob store do Azure
-            services.Configure<AzureStorageOptions>(Configuration.GetSection("Microsift.Storage"));
+            //services.Configure<AzureStorageOptions>(Configuration.GetSection("Microsift.Storage"));
 
-            services.AddDbContext<CasaDaHortaContext>(opt =>
-            {
-                opt.UseSqlServer(Configuration.GetConnectionString("CasaDaHortaConnection"));
-            });
+            //services.AddDbContext<CasaDaHortaContext>(opt =>
+            //{
+                //opt.UseSqlServer(Configuration.GetConnectionString("CasaDaHortaConnection"));
+            //});
 
             //controlador de conta e perfil
             services.AddIdentity<Accounty, Role>()
