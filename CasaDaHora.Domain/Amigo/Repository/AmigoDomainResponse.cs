@@ -11,7 +11,6 @@ namespace CasaDaHora.Domain.Amigo.Repository
         public string Sobrenome { get; set; }
         public string Email { get; set; }
         public DateTime Datanascimento { get; set; }
-        public string Password { get; set; }
         public string UrlFoto { get; set; }
     }
 }

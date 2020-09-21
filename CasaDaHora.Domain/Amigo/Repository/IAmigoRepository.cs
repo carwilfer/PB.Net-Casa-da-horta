@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Identity;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,6 +11,7 @@ namespace CasaDaHora.Domain.Amigo.Repository
         Task<AmigoDomain> GetAmigoByEmailPassword(string email, string password);
         Task<AmigoDomain> GetAmigoByNomePassword(string Nome, string password);
         Task CreateAmigo(AmigoDomain amigoDomain);
+        Task<IdentityResult> DeleteAsync(Guid id, string nome);
         void UpdateAmigo(AmigoDomain amigoDomain);
         Task<AmigoDomain> GetByEmail(string email);
         Task<AmigoDomain> GetById(Guid id);

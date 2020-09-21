@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CasaDaHora.Domain.Post;
 using CasaDaHorta.Services.PostsServices;
 using Microsoft.AspNetCore.Mvc;
 
@@ -30,21 +31,21 @@ namespace CasaDaHorta.API.Controllers
         }
 
         [HttpGet("{id}")]
-        public IActionResult Get(int id)
+        public IActionResult Get(Guid id)
         {
             return Ok();
         }
 
         [HttpPost]
-        public IActionResult Post([FromBody] PostRequest request)
-        {
-            var result = PostServices.CriarPost(request);
+        //public IActionResult Post([FromBody] Comentario comentario)
+        //{
+        //    var result = PostServices.Salvar(comentario);
 
-            if (result.Sucesso)
-                return Ok();
-            else
-                return UnprocessableEntity(result.Erros);
-        }
+        //    if (result.Sucesso)
+        //        return Ok();
+        //    else
+        //        return UnprocessableEntity(result.Erros);
+        //}
 
 
         // PUT api/<PostController>/5

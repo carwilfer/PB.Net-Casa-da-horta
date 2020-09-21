@@ -17,8 +17,6 @@ namespace CasaDaHorta.Services.AmigoServices.AjudaPadrão
                 Sobrenome = amigoDomain.Sobrenome,
                 Email = amigoDomain.Email,
                 Datanascimento = amigoDomain.Datanascimento,
-                Password = amigoDomain.Password
-
             };
             return amigoDomainResponse;
         }
@@ -31,7 +29,6 @@ namespace CasaDaHorta.Services.AmigoServices.AjudaPadrão
                 Sobrenome = amigoDomainResponse.Sobrenome,
                 Email = amigoDomainResponse.Email,
                 Datanascimento = amigoDomainResponse.Datanascimento,
-                Password = amigoDomainResponse.Password
             };
             return amigoDomain;
         }

@@ -37,3 +37,6 @@ C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHorta.Repository\b
 C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHorta.Repository\bin\Debug\netcoreapp3.1\CasaDaHora.Domain.pdb
 C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHorta.Repository\bin\Debug\netcoreapp3.1\CasaDaHorta.CrossCutting.pdb
 C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHorta.Repository\obj\Debug\netcoreapp3.1\CasaDaHorta.Repository.csproj.CopyComplete
+C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHorta.Repository\bin\Debug\netcoreapp3.1\CasaDaHorta.Repository.pdb
+C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHorta.Repository\obj\Debug\netcoreapp3.1\CasaDaHorta.Repository.dll
+C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHorta.Repository\obj\Debug\netcoreapp3.1\CasaDaHorta.Repository.pdb

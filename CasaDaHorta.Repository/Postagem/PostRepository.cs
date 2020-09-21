@@ -1,4 +1,5 @@
-﻿using CasaDaHora.Domain.Post;
+﻿using CasaDaHora.Domain.Comment;
+using CasaDaHora.Domain.Post;
 using CasaDaHora.Domain.Post.IPostRepository;
 using CasaDaHorta.Repository.Context;
 using Microsoft.EntityFrameworkCore;
@@ -69,5 +70,16 @@ namespace CasaDaHorta.Repository.AccountRepository
                 throw;
             }
         }
+
+        Task<Postagem> IPostRepository.GetAll()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Salvar(Comentario comentario)
+        {
+            throw new NotImplementedException();
+        }
+               
     }
 }

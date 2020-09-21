@@ -20,7 +20,6 @@ namespace CasaDaHorta.Services.AmigoServices
         Task<AmigoDomain> GetAmigoDomainById(Guid id);
 
         Task<AmigoDomainResponse> GetById(Guid id);
-
         Task<List<AmigoDomainResponse>> GetAll();
 
         Task<bool> UpdateAmigoDomain(Guid id, string Nome, string Sobrenome, string Email, string Password, string UrlFoto);
@@ -29,6 +28,6 @@ namespace CasaDaHorta.Services.AmigoServices
 
         Task<bool> AddSeguidores(Guid amigoDomainId, Guid amigosSeguidoresId);
 
-        Task<bool> ExcluirRemover(Guid amigoDomainId, Guid amigosSeguidoresId);
+        Task<bool> ExcluirRemover(Guid id, Guid amigoDomainId, Guid amigosSeguidoresId);
     }
 }

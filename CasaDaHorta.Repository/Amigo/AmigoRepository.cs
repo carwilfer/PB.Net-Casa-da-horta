@@ -101,9 +101,9 @@ namespace CasaDaHorta.Repository.Amigo
             return Task.CompletedTask;
         }
 
-        public Task SetUserNameAsync(AmigoDomain user, string userName, CancellationToken cancellationToken)
+        public Task SetUserNameAsync(AmigoDomain amigoDomain, string userName, CancellationToken cancellationToken)
         {
-            user.Nome = userName;
+            amigoDomain.Nome = userName;
             return Task.CompletedTask;
         }
 
@@ -150,12 +150,16 @@ namespace CasaDaHorta.Repository.Amigo
 
         public async Task<AmigoDomain> GetByEmail(string email)
         {
-            return await Context.Amigos.FirstOrDefaultAsync(user => user.Email == email);
+            return await Context.Amigos.FirstOrDefaultAsync(x => x.Email == email);
+        }
+        public AmigoDomain GetAmigoDomainByEmail(string email)
+        {
+            return Context.Amigos.FirstOrDefault(x => x.Email == email);
         }
 
         public async Task<AmigoDomain> GetById(Guid id)
         {
-            return await Context.Amigos.FirstOrDefaultAsync(user => user.Id == id);
+            return await Context.Amigos.FirstOrDefaultAsync(x => x.Id == id);
         }
 
         public async Task<List<AmigoDomain>> GetAll()
@@ -178,7 +182,8 @@ namespace CasaDaHorta.Repository.Amigo
                     Nome = amigoEncontrado.Nome,
                     Sobrenome = amigoEncontrado.Sobrenome,
                     Email = amigoEncontrado.Email,
-                    Datanascimento = amigoEncontrado.Datanascimento
+                    Datanascimento = amigoEncontrado.Datanascimento,
+                    UrlFoto = amigoEncontrado.UrlFoto
                 });
             }
 
@@ -211,6 +216,18 @@ namespace CasaDaHorta.Repository.Amigo
                 Console.WriteLine(e);
                 throw;
             }
+        }
+        public void Save(AmigoDomain amigoDomain)
+        {
+            this.Context.Amigos.Add(amigoDomain);
+            this.Context.SaveChanges();
+        }
+
+        public async Task<IdentityResult> DeleteAsync(Guid id, string nome)
+        {
+            this.Context.Amigos.Remove.(id);
+            await this.Context.SaveChangesAsync();
+            return IdentityResult.Success;
         }
     }
 }

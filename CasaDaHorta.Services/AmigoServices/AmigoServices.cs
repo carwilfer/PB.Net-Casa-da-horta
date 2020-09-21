@@ -32,6 +32,22 @@ namespace CasaDaHorta.Services.AmigoServices
             AmigoDomainResponse amigoDomainResponse = Ajuda.ConvertendoAmigoDomainEmAmigoDomainResponse(amigoDomain);
             return amigoDomainResponse;
         }
+        public void Save(AmigoDomain amigoDomain)
+        {
+            if (this.GetAmigoDomainByEmail(amigoDomain.Email) != null)
+            {
+                throw new Exception("Já existe um aluno com este email, por favor cadastre outro email");
+            }
+
+            var anoAtual = DateTime.Now.Date.Year;
+
+            if ((anoAtual - Convert.ToDateTime(amigoDomain.Datanascimento).Date.Year) < 21)
+            {
+                throw new Exception("Para cadastrar um novo aluno ele deve no minimo 21 anos");
+            }
+
+            this.AmigoRepository.CreateAmigo(amigoDomain);
+        }
 
         public async Task<AmigoDomain> GetAmigoDomainByEmail(string email)
         {
@@ -72,7 +88,6 @@ namespace CasaDaHorta.Services.AmigoServices
                     Nome = t.Nome,
                     Sobrenome = t.Sobrenome,
                     Email = t.Email,
-                    Password = t.Password,
                     UrlFoto = t.UrlFoto,
                 });
             }
@@ -142,7 +157,7 @@ namespace CasaDaHorta.Services.AmigoServices
             return true;
         }
 
-        public async Task<bool> ExcluirRemover(Guid amigoDomainId, Guid amigosSeguidoresId)
+        public async Task<bool> ExcluirRemover(Guid id, Guid amigoDomainId, Guid amigosSeguidoresId)
         {
             AmigoDomain amigoDomain = await AmigoRepository.GetById(amigoDomainId);
             AmigoDomain amigosSeguidores = await AmigoRepository.GetById(amigosSeguidoresId);
@@ -153,5 +168,10 @@ namespace CasaDaHorta.Services.AmigoServices
             AmigoRepository.RemoveSeguidor(amigoDosAmigos);
             return true;
         }
+        public async void Delete(Guid id)
+        {
+            await AmigoRepository.DeleteAsync();
+        }
+
     }
 }

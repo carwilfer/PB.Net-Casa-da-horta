@@ -1,5 +1,6 @@
 ﻿using CasaDaHora.Domain.Post;
 using CasaDaHora.Domain.Post.IPostRepository;
+using Microsoft.AspNetCore.Mvc.ViewFeatures.Buffers;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -67,6 +68,27 @@ namespace CasaDaHorta.Services.PostsServices
                 Console.WriteLine(e);
                 return false;
             }
+        }
+
+        public async Task<Postagem> GetAll()
+        {
+            return await PostRepository.GetAll();
+
+        }
+
+        public IEnumerable<Postagem> GetAll(Guid id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<Postagem> ObterTodosPosts()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Salvar(Comentario comentario)
+        {
+            throw new NotImplementedException();
         }
     }
 }

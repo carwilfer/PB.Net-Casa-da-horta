@@ -19,7 +19,6 @@ C:\Users\Carlos\Desktop\Projeto de bloco\Casa-da-horta\PB.Net-Casa-da-horta\Casa
 C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHorta.CrossCutting\bin\Debug\netcoreapp3.1\CasaDaHorta.CrossCutting.deps.json
 C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHorta.CrossCutting\bin\Debug\netcoreapp3.1\CasaDaHorta.CrossCutting.dll
 C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHorta.CrossCutting\bin\Debug\netcoreapp3.1\CasaDaHorta.CrossCutting.pdb
-C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHorta.CrossCutting\obj\Debug\netcoreapp3.1\CasaDaHorta.CrossCutting.csprojAssemblyReference.cache
 C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHorta.CrossCutting\obj\Debug\netcoreapp3.1\CasaDaHorta.CrossCutting.AssemblyInfoInputs.cache
 C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHorta.CrossCutting\obj\Debug\netcoreapp3.1\CasaDaHorta.CrossCutting.AssemblyInfo.cs
 C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHorta.CrossCutting\obj\Debug\netcoreapp3.1\CasaDaHorta.CrossCutting.csproj.CoreCompileInputs.cache
