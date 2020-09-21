@@ -9,63 +9,64 @@ namespace CasaDaHorta.Services.PostsServices
 {
     public class PostServices : IPostServices
     {
+        public IPostRepository PostRepository { get; set; }
         public PostServices(IPostRepository postRepository)
         {
             PostRepository = postRepository;
         }
 
-        public IPostRepository PostRepository { get; set;  }
-
-        public Task<Post> CreatePost(Guid Id, Guid AmigoDomainId, string UrlFoto, string Comentario)
+        public async Task<Postagem> CreatePost(Guid Id, Guid amigoDomainId, string urlFoto, string textoFoto)
         {
-            throw new NotImplementedException();
+            Postagem postagem = new Postagem(Id, amigoDomainId, urlFoto, textoFoto);
+            await PostRepository.CreatePost(postagem);
+            return postagem;
+
         }
 
-        public PostCreateResult CriarPost(PostRequest postData)
+        public async Task<bool> UpdatePost(Guid Id, string UrlFoto, string textoFoto)
         {
-            var result = new PostCreateResult();
-
-            if (string.IsNullOrEmpty(postData.Texto))
-                result.Erros.Add("Texto do post é obrigatório");
-
-            if (!result.Sucesso)
-                return result;
-
-            var post = new Post
+            try
             {
-                Texto = postData.Texto,
-                UrlFoto = postData.UrlImagem
-            };
+                var post = await PostRepository.GetById(Id);
 
-            PostRepository.Salvar(post);
+                if (!String.IsNullOrEmpty(UrlFoto))
+                {
+                    post.UrlFoto = UrlFoto;
+                }
+                if (!String.IsNullOrEmpty(textoFoto))
+                {
+                    post.TextoFoto = textoFoto;
+                }
 
-            return result;
+                await PostRepository.UpdatePost(post);
+                return true;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                return false;
+            }
         }
 
-        public Task<Post> GetById(Guid id)
+        public async Task<Postagem> GetById(Guid id)
         {
-            throw new NotImplementedException();
+            return await PostRepository.GetById(id);
         }
 
-        public IEnumerable<Post> ObterTodosPosts()
+        public async Task<bool> RemovePost(Guid Id)
         {
-            return PostRepository.ObterTodos();
-        }
+            try
+            {
+                var post = await PostRepository.GetById(Id);
 
-        public Task<bool> RemovePost(Guid Id)
-        {
-            throw new NotImplementedException();
+                await PostRepository.RemovePost(post);
+                return true;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                return false;
+            }
         }
-
-        public Task<bool> UpdatePost(Guid Id, string UrlFoto, string Comentario)
-        {
-            throw new NotImplementedException();
-        }
-    }
-
-    public class PostCreateResult
-    {
-        public bool Sucesso => Erros.Count == 0;
-        public List<string> Erros { get; } = new List<string>();
     }
 }

@@ -7,9 +7,8 @@ namespace CasaDaHora.Domain.Comment.Repository
 {
     public interface ICommentRepository
     {
-        Task<Comment> Comments(string comentario, string UserName);
-
-        void Salvar(Comment comment);
-        IEnumerable<Comment> ObterTodos();
+        Task<Comentario> Comments(string comentario, string UserName);
+        void Salvar(Comentario comment);
+        IEnumerable<Comentario> ObterTodos();
     }
 }

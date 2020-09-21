@@ -1,5 +1,6 @@
 ﻿using CasaDaHora.Domain.Account;
 using CasaDaHora.Domain.Amigo;
+using CasaDaHora.Domain.Amigo.Repository;
 using CasaDaHora.Domain.Comment;
 using CasaDaHora.Domain.Post;
 using CasaDaHorta.Repository.Mapping;
@@ -14,12 +15,13 @@ namespace CasaDaHorta.Repository.Context
     public class CasaDaHortaContext : DbContext
     {
         public DbSet<AmigoDomain> Amigos { get; set; }
-        public DbSet<AmigoDosAmigos> AmigosDosAmigos { get; set; }
-
+        public DbSet<AmigoDosAmigos> MeuAmigoTemAmigos { get; set; }
+        public DbSet<AmigoSeguidorResponse> AmigosSeguidorResponse { get; set; }
         public DbSet<Accounty> Accounts { get; set; }
         public DbSet<RoleDomain> Profiles { get; set; }
-        public DbSet<Post> Post { get; set; }
-        public DbSet<Comment> Comment { get; set; }
+        public DbSet<Postagem> Postagens { get; set; }
+        public DbSet<Comentario> Comment { get; set; }
+
 
         public static readonly ILoggerFactory _loggerFactory
                 = LoggerFactory.Create(builder => { builder.AddConsole(); });

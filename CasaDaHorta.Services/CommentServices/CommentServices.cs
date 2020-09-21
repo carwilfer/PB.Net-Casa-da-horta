@@ -23,7 +23,7 @@ namespace CasaDaHorta.Services.CommentServices
             if (!result.Sucesso)
                 return result;
 
-            var comentarios = new Comment
+            var comentarios = new Comentario
             {
                 Comentario = commentData.Texto,
                 Amigo = commentData.UrlImagem
@@ -34,7 +34,7 @@ namespace CasaDaHorta.Services.CommentServices
             return result;
         }
 
-        public IEnumerable<Comment> ObterTodosComment()
+        public IEnumerable<Comentario> ObterTodosComment()
         {
             return CommentRepository.ObterTodos();
         }

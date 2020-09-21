@@ -1,7 +1,9 @@
-﻿using CasaDaHora.Domain.Amigo.Repository;
+﻿using CasaDaHora.Domain.Amigo;
+using CasaDaHora.Domain.Amigo.Repository;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace CasaDaHorta.Services.AmigoServices
 {
@@ -9,26 +11,24 @@ namespace CasaDaHorta.Services.AmigoServices
     {
         IAmigoRepository AmigoRepository { get; set; }
 
-        Tarefa<UserResponse> CreateUser(id do Guid  , string firstName, string lastName, string email, string senha, string photoUrl, status bool );
+        Task<AmigoDomainResponse> CreateAmigoDomain(Guid Id, string Nome, string Sobrenome, string email, string password, string UrlFoto);
 
-        Tarefa<Usuário> GetUserByEmail(string e-mail );
+        Task<AmigoDomain> GetAmigoDomainByEmail(string email);
 
-        Tarefa<UserResponse> GetByEmail(string e-mail );
+        Task<AmigoDomainResponse> GetByEmail(string email);
 
-        Tarefa<usuário> GetUserById(id do Guid  );
+        Task<AmigoDomain> GetAmigoDomainById(Guid id);
 
-        Tarefa<Resposta do usuário> GetById(id do Guid  );
+        Task<AmigoDomainResponse> GetById(Guid id);
 
-        Tarefa<List<UserResponse>> GetAll();
+        Task<List<AmigoDomainResponse>> GetAll();
 
-        Tarefa<bool> UpdateUser(id do Guid  , string firstName, string lastName, string email, string senha, string photoUrl);
+        Task<bool> UpdateAmigoDomain(Guid id, string Nome, string Sobrenome, string Email, string Password, string UrlFoto);
 
-        Tarefa<bool> RemoveUser(usuário usuário);
+        Task<List<AmigoSeguidorResponse>> GetSeguidores(Guid userId);
 
-        Tarefa<List<UserFollowersResponse>> GetFollowers(Guid userId);
+        Task<bool> AddSeguidores(Guid amigoDomainId, Guid amigosSeguidoresId);
 
-        Task<bool> AddFollower(Guid userId, Guid followerId);
-
-        Task<bool> RemoveFollower(Guid userId, Guid followerId);
+        Task<bool> ExcluirRemover(Guid amigoDomainId, Guid amigosSeguidoresId);
     }
 }

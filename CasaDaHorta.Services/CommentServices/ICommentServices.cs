@@ -12,6 +12,6 @@ namespace CasaDaHorta.Services.CommentServices
         ICommentRepository CommentRepository { get; }
 
         CommentCreateResult CriarComment(CommentRequest postData);
-        IEnumerable<Comment> ObterTodosComment();
+        IEnumerable<Comentario> ObterTodosComment();
     }
 }

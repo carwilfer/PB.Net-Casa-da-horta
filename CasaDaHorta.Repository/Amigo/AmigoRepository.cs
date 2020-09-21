@@ -22,8 +22,6 @@ namespace CasaDaHorta.Repository.Amigo
             this.Context = casaDaHortaContext;
         }
 
-
-
         public async Task<IdentityResult> CreateAsync(AmigoDomain user, CancellationToken cancellationToken)
         {
             this.Context.Amigos.Add(user);
@@ -162,19 +160,19 @@ namespace CasaDaHorta.Repository.Amigo
 
         public async Task<List<AmigoDomain>> GetAll()
         {
-            return await  Context.Amigos.ToListAsync();
+            return await Context.Amigos.ToListAsync();
         }
 
         public async Task<List<AmigoSeguidorResponse>> GetAmigoDosAmigos(AmigoDomain amigoDomain)
         {
-            amigoDomain.AmigosQueSeguem = await Context.AmigosDosAmigos.Where(x => x.AmigoDomainId == amigoDomain.Id).ToListAsync();
+            amigoDomain.AmigosQueSeguem = await Context.MeuAmigoTemAmigos.Where(x => x.AmigoDomainId == amigoDomain.Id).ToListAsync();
 
-            List<AmigoDosAmigos> amigosQueSeguem = new List<AmigoDosAmigos>();
+            List<AmigoSeguidorResponse> amigosQueSeguem = new List<AmigoSeguidorResponse>();
 
-            foreach(AmigoSeguidorResponse x in amigoDomain.AmigosQueSeguem)
+            foreach (AmigoDosAmigos t in amigoDomain.AmigosQueSeguem)
             {
-                AmigoDomain amigoEncontrado = await Context.Amigos.FirstOrDefaultAsync(amigoDomain => amigoDomain.Id == x.AmigoDosAmigosId);
-                amigosQueSeguem.Add(new AmigoDosAmigos
+                AmigoDomain amigoEncontrado = await Context.Amigos.FirstOrDefaultAsync(amigoDomain => amigoDomain.Id == t.AmigoDosAmigosId);
+                amigosQueSeguem.Add(new AmigoSeguidorResponse
                 {
                     Id = amigoEncontrado.Id,
                     Nome = amigoEncontrado.Nome,
@@ -187,11 +185,11 @@ namespace CasaDaHorta.Repository.Amigo
             return amigosQueSeguem;
         }
 
-        public async Task AddFollower(AmigoDosAmigos amigoDosAmigos)
+        public async Task AddSeguidor(AmigoDosAmigos amigoDosAmigos)
         {
             try
             {
-                await Context.AmigosDosAmigos.AddAsync(amigoDosAmigos);
+                await Context.MeuAmigoTemAmigos.AddAsync(amigoDosAmigos);
                 Context.SaveChanges();
             }
             catch (Exception e)
@@ -201,11 +199,11 @@ namespace CasaDaHorta.Repository.Amigo
             }
         }
 
-        public void RemoveFollower(AmigoDosAmigos amigoDosAmigos)
+        public void RemoveSeguidor(AmigoDosAmigos amigoDosAmigos)
         {
             try
             {
-                Context.AmigosDosAmigos.Remove(amigoDosAmigos);
+                Context.MeuAmigoTemAmigos.Remove(amigoDosAmigos);
                 Context.SaveChanges();
             }
             catch (Exception e)

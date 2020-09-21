@@ -12,6 +12,7 @@ namespace CasaDaHora.Domain.Amigo
         public string Email { get; set; }
         public DateTime Datanascimento { get; set; }
         public string Password { get; set; }
+        public string UrlFoto { get; set; }
         public virtual IList<AmigoDomain> AmigosQueSeguem { get; set; }
         public RoleDomain Role { get; set; }
 

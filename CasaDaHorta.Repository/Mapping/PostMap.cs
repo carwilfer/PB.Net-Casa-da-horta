@@ -9,20 +9,20 @@ using Twilio.Rest;
 
 namespace CasaDaHorta.Repository.Mapping
 {
-    public class PostMap : IEntityTypeConfiguration<Post>
+    public class PostMap : IEntityTypeConfiguration<Postagem>
     {
-        public void Configure(EntityTypeBuilder<Post> builder)
+        public void Configure(EntityTypeBuilder<Postagem> builder)
         {
             builder.ToTable("Post");
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Id).IsRequired().ValueGeneratedOnAdd();
 
-            builder.Property(x => x.Texto).IsRequired().HasMaxLength(250);
+            builder.Property(x => x.TextoFoto).IsRequired().HasMaxLength(250);
             builder.Property(x => x.UrlFoto).HasMaxLength(250);
 
             //builder.HasOne(x => x.Comments).WithMany(x => x.Comment);
             //builder.HasMany(x => Comments).WithOne(c => c.Post);
-            builder.HasOne(x => x.Amigo);
+            //builder.HasOne(x => x.AmigoDomainId);
         }
     }
 }
