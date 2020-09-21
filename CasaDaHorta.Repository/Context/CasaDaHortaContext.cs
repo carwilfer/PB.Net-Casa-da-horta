@@ -18,6 +18,7 @@ namespace CasaDaHorta.Repository.Context
         public DbSet<AmigoDosAmigos> MeuAmigoTemAmigos { get; set; }
         public DbSet<AmigoSeguidorResponse> AmigosSeguidorResponse { get; set; }
         public DbSet<Accounty> Accounts { get; set; }
+        public DbSet<Conta> Login { get; set; }
         public DbSet<RoleDomain> Profiles { get; set; }
         public DbSet<Postagem> Postagens { get; set; }
         public DbSet<Comentario> Comment { get; set; }
@@ -40,7 +41,8 @@ namespace CasaDaHorta.Repository.Context
             modelBuilder.ApplyConfiguration(new AmigoMap());
             modelBuilder.ApplyConfiguration(new PostMap());
             modelBuilder.ApplyConfiguration(new RoleMap());
-                        
+            modelBuilder.ApplyConfiguration(new ContaMap());
+
             base.OnModelCreating(modelBuilder);
         }
     }

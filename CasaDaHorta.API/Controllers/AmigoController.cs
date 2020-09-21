@@ -21,6 +21,40 @@ namespace CasaDaHorta.API.Controllers
             AmigoServices = iAmigoServices;
         }
 
+        public AmigoController(AmigoServices amigoServices)
+        {
+            this.AmigoServices = amigoServices;
+
+        }
+
+
+        //[Route("Token")]
+        //[HttpPost]
+        //[RequireHttps]
+        //public IActionResult Token([FromBody] LoginRequest loginRequest)
+        //{
+        //    var token = this.AmigoServices.Login(loginRequest.Login, loginRequest.Senha);
+
+        //    if (String.IsNullOrWhiteSpace(token))
+        //    {
+        //        return BadRequest("Login ou senha invalida");
+        //    }
+
+        //    return Ok(new
+        //    {
+        //        Token = token
+        //    });
+        //}
+        //public class LoginRequest
+        //{
+        //    public String Login { get; set; }
+        //    public String Senha { get; set; }
+
+        //}
+
+
+
+
         // GET: api/<AmigoController>
         [HttpGet]
         public async Task<IActionResult> Get()
@@ -37,17 +71,16 @@ namespace CasaDaHorta.API.Controllers
 
         // POST api/<AmigoController>
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody] string amigoRes)
+        public void Post([FromBody] AmigoDomain amigoDomain)
         {
-            Guid Id = Guid.NewGuid();
-
-            AmigoDomainResponse amigoRep = await AmigoServices.CreateAmigoDomain(Id, amigoRes.Nome, amigoRes.Sobrenome,
-                amigoRes.Email, amigoRes.Password, amigoRes.UrlFoto);
-
-            if (amigoRep == null)
-                return BadRequest();
-
-            return Ok();
+            try
+            {
+                this.AmigoServices.SaveAmigoDomain(amigoDomain);
+            }
+            catch (System.Exception ex)
+            {
+                throw ex;
+            }
         }
 
         // PUT api/<AmigoController>/5
@@ -82,7 +115,7 @@ namespace CasaDaHorta.API.Controllers
         [HttpDelete("{id}")]
         public void Delete(Guid id)
         {
-            this.AmigoServices.ExcluirRemover(id);
+            this.AmigoServices.Delete(id);
 
             //AmigoDomain amigoDomain = await AmigoServices.GetAmigoDomainById(id);
 
@@ -111,16 +144,16 @@ namespace CasaDaHorta.API.Controllers
             return Ok();
         }
 
-        [HttpDelete]
-        [Route("{id}/followers")]
-        public async Task<IActionResult> RemoveFollower([FromRoute] Guid id, [FromBody] SeguidorRequest seguidor)
-        {
-            bool result = await AmigoServices.ExcluirRemover(id, seguidor.Id);
+        //[HttpDelete]
+        //[Route("{id}/followers")]
+        //public async Task<bool> RemoveFollower([FromRoute] Guid id, [FromBody] SeguidorRequest seguidor)
+        //{
+        //    bool result = await AmigoServices.ExcluirOk(id, seguidor.Id);
 
-            if (!result)
-                return BadRequest();
+        //    if (!result)
+        //        return BadRequest();
 
-            return Ok();
-        }
+        //    return Ok();
+        //}
     }
 }

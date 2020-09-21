@@ -29,7 +29,6 @@ C:\Users\Carlos\Desktop\Projeto de bloco\Casa-da-horta\PB.Net-Casa-da-horta\Casa
 C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHorta.Repository\obj\Debug\netcoreapp3.1\CasaDaHorta.Repository.csprojAssemblyReference.cache
 C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHorta.Repository\obj\Debug\netcoreapp3.1\CasaDaHorta.Repository.AssemblyInfoInputs.cache
 C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHorta.Repository\obj\Debug\netcoreapp3.1\CasaDaHorta.Repository.AssemblyInfo.cs
-C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHorta.Repository\obj\Debug\netcoreapp3.1\CasaDaHorta.Repository.csproj.CoreCompileInputs.cache
 C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHorta.Repository\bin\Debug\netcoreapp3.1\CasaDaHorta.Repository.deps.json
 C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHorta.Repository\bin\Debug\netcoreapp3.1\CasaDaHorta.Repository.dll
 C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHorta.Repository\bin\Debug\netcoreapp3.1\CasaDaHora.Domain.dll
@@ -40,3 +39,7 @@ C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHorta.Repository\o
 C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHorta.Repository\bin\Debug\netcoreapp3.1\CasaDaHorta.Repository.pdb
 C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHorta.Repository\obj\Debug\netcoreapp3.1\CasaDaHorta.Repository.dll
 C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHorta.Repository\obj\Debug\netcoreapp3.1\CasaDaHorta.Repository.pdb
+C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHorta.Repository\obj\Debug\netcoreapp3.1\CasaDaHorta.Repository.csproj.CoreCompileInputs.cache
+C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHorta.Repository\bin\Debug\netcoreapp3.1\CasaDaHorta.Repository.runtimeconfig.json
+C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHorta.Repository\bin\Debug\netcoreapp3.1\CasaDaHorta.Repository.runtimeconfig.dev.json
+C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHorta.Repository\obj\Debug\netcoreapp3.1\CasaDaHorta.Repository.genruntimeconfig.cache

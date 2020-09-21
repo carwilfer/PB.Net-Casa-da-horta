@@ -223,11 +223,11 @@ namespace CasaDaHorta.Repository.Amigo
             this.Context.SaveChanges();
         }
 
-        public async Task<IdentityResult> DeleteAsync(Guid id, string nome)
+        public void Delete(Guid id)
         {
-            this.Context.Amigos.Remove.(id);
-            await this.Context.SaveChangesAsync();
-            return IdentityResult.Success;
+            var aluno = Context.Amigos.FirstOrDefault(x => x.Id == id);
+            this.Context.Amigos.Remove(aluno);
+            this.Context.SaveChanges();
         }
     }
 }

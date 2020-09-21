@@ -13,26 +13,26 @@ namespace CasaDaHorta.Services.CommentServices
 
         ICommentRepository ICommentServices.CommentRepository => throw new NotImplementedException();
 
-        public CommentCreateResult CriarComment(CommentRequest commentData)
-        {
-            var result = new CommentCreateResult();
+        //public CommentCreateResult CriarComment(CommentRequest commentData)
+        //{
+        //    var result = new CommentCreateResult();
 
-            if (string.IsNullOrEmpty(commentData.Texto))
-                result.Erros.Add("Texto do post é obrigatório");
+        //    if (string.IsNullOrEmpty(commentData.Texto))
+        //        result.Erros.Add("Texto do post é obrigatório");
 
-            if (!result.Sucesso)
-                return result;
+        //    if (!result.Sucesso)
+        //        return result;
 
-            var comentarios = new Comentario
-            {
-                Comentario = commentData.Texto,
-                Amigo = commentData.UrlImagem
-            };
+        //    var comentarios = new Comentario
+        //    {
+        //        Comentario = commentData.Texto,
+        //        Amigo = commentData.UrlImagem
+        //    };
 
-            CommentRepository.Salvar(comentarios);
+        //    CommentRepository.Salvar(comentarios);
 
-            return result;
-        }
+        //    return result;
+        //}
 
         public IEnumerable<Comentario> ObterTodosComment()
         {

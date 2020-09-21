@@ -11,7 +11,7 @@ namespace CasaDaHora.Domain.Amigo.Repository
         Task<AmigoDomain> GetAmigoByEmailPassword(string email, string password);
         Task<AmigoDomain> GetAmigoByNomePassword(string Nome, string password);
         Task CreateAmigo(AmigoDomain amigoDomain);
-        Task<IdentityResult> DeleteAsync(Guid id, string nome);
+        public void Delete(Guid id);
         void UpdateAmigo(AmigoDomain amigoDomain);
         Task<AmigoDomain> GetByEmail(string email);
         Task<AmigoDomain> GetById(Guid id);
@@ -19,5 +19,6 @@ namespace CasaDaHora.Domain.Amigo.Repository
         Task<List<AmigoSeguidorResponse>> GetAmigoDosAmigos(AmigoDomain amigoDomain);
         Task AddSeguidor(AmigoDosAmigos amigoDosAmigos);
         void RemoveSeguidor(AmigoDosAmigos amigoDosAmigos);
+        void Save(AmigoDomain amigoDomain);
     }
 }

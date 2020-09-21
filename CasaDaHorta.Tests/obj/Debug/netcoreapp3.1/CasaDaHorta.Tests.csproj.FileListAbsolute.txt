@@ -239,3 +239,4 @@ C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHorta.Tests\obj\De
 C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHorta.Tests\obj\Debug\netcoreapp3.1\CasaDaHorta.Tests.dll
 C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHorta.Tests\obj\Debug\netcoreapp3.1\CasaDaHorta.Tests.pdb
 C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHorta.Tests\obj\Debug\netcoreapp3.1\CasaDaHorta.Tests.genruntimeconfig.cache
+C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHorta.Tests\obj\Debug\netcoreapp3.1\CasaDaHorta.Tests.csprojAssemblyReference.cache

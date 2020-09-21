@@ -34,3 +34,15 @@ C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHorta.Services\obj
 C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHorta.Services\obj\Debug\netcoreapp3.1\CasaDaHorta.Services.AssemblyInfoInputs.cache
 C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHorta.Services\obj\Debug\netcoreapp3.1\CasaDaHorta.Services.AssemblyInfo.cs
 C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHorta.Services\obj\Debug\netcoreapp3.1\CasaDaHorta.Services.csproj.CoreCompileInputs.cache
+C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHorta.Services\bin\Debug\netcoreapp3.1\CasaDaHorta.Services.deps.json
+C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHorta.Services\bin\Debug\netcoreapp3.1\CasaDaHorta.Services.dll
+C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHorta.Services\bin\Debug\netcoreapp3.1\CasaDaHorta.Services.pdb
+C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHorta.Services\bin\Debug\netcoreapp3.1\CasaDaHora.Domain.dll
+C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHorta.Services\bin\Debug\netcoreapp3.1\CasaDaHorta.CrossCutting.dll
+C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHorta.Services\bin\Debug\netcoreapp3.1\CasaDaHorta.Repository.dll
+C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHorta.Services\bin\Debug\netcoreapp3.1\CasaDaHora.Domain.pdb
+C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHorta.Services\bin\Debug\netcoreapp3.1\CasaDaHorta.Repository.pdb
+C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHorta.Services\bin\Debug\netcoreapp3.1\CasaDaHorta.CrossCutting.pdb
+C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHorta.Services\obj\Debug\netcoreapp3.1\CasaDaHorta.Services.csproj.CopyComplete
+C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHorta.Services\obj\Debug\netcoreapp3.1\CasaDaHorta.Services.dll
+C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHorta.Services\obj\Debug\netcoreapp3.1\CasaDaHorta.Services.pdb
