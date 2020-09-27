@@ -1,7 +1,6 @@
 ﻿using CasaDaHora.Domain.Account.Repository;
 using CasaDaHora.Domain.Account;
 using Microsoft.AspNetCore.Identity;
-using CasaDaHora.Domain.Account;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -13,18 +12,18 @@ namespace CasaDaHorta.Services.Account
     public class AccountIdentityManager : IAccountIdentityManager
     {
         private IAccountRepository Repository { get; set; }
-        private SignInManager<Accounty> SignInManager { get; set; }
+        private SignInManager<CasaDaHora.Domain.Account.Account> SignInManager { get; set; }
 
-        public AccountIdentityManager(IAccountRepository accountRepository, SignInManager<Accounty> signInManager)
+        public AccountIdentityManager(IAccountRepository accountRepository, SignInManager<CasaDaHora.Domain.Account.Account> signInManager)
         {
             this.Repository = accountRepository;
             this.SignInManager = signInManager;
 
         }
 
-        public async Task<SignInResult> Login(string userName, string password)
+        public async Task<SignInResult> Login(string email, string password)
         {
-            var account = await this.Repository.GetAccountByUserNamePassword(userName, password);
+            var account = await this.Repository.GetAccountByEmailPassword(email, password);
 
             if (account == null)
             {

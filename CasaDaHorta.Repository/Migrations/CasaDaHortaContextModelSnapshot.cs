@@ -15,11 +15,11 @@ namespace CasaDaHorta.Repository.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "3.1.7")
+                .HasAnnotation("ProductVersion", "3.1.8")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("CasaDaHora.Domain.Account.Accounty", b =>
+            modelBuilder.Entity("CasaDaHora.Domain.Account.Account", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -35,8 +35,8 @@ namespace CasaDaHorta.Repository.Migrations
 
                     b.Property<string>("Nome")
                         .IsRequired()
-                        .HasColumnType("nvarchar(250)")
-                        .HasMaxLength(250);
+                        .HasColumnType("nvarchar(150)")
+                        .HasMaxLength(150);
 
                     b.Property<string>("Password")
                         .IsRequired()
@@ -47,9 +47,7 @@ namespace CasaDaHorta.Repository.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("SobreNome")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(250)")
-                        .HasMaxLength(250);
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -74,11 +72,80 @@ namespace CasaDaHorta.Repository.Migrations
                     b.ToTable("Role");
                 });
 
-            modelBuilder.Entity("CasaDaHora.Domain.Account.Accounty", b =>
+            modelBuilder.Entity("CasaDaHora.Domain.Comment.Comments", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid?>("AccountId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(250)")
+                        .HasMaxLength(250);
+
+                    b.Property<Guid?>("PostId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AccountId");
+
+                    b.HasIndex("PostId");
+
+                    b.ToTable("Comment");
+                });
+
+            modelBuilder.Entity("CasaDaHora.Domain.Post.Post", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid?>("AccountId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(250)")
+                        .HasMaxLength(250);
+
+                    b.Property<string>("ImagePost")
+                        .HasColumnType("nvarchar(250)")
+                        .HasMaxLength(250);
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AccountId");
+
+                    b.ToTable("Post");
+                });
+
+            modelBuilder.Entity("CasaDaHora.Domain.Account.Account", b =>
                 {
                     b.HasOne("CasaDaHora.Domain.Account.Role", "Role")
                         .WithMany("Accounts")
                         .HasForeignKey("RoleId");
+                });
+
+            modelBuilder.Entity("CasaDaHora.Domain.Comment.Comments", b =>
+                {
+                    b.HasOne("CasaDaHora.Domain.Account.Account", "Account")
+                        .WithMany("Comments")
+                        .HasForeignKey("AccountId");
+
+                    b.HasOne("CasaDaHora.Domain.Post.Post", "Post")
+                        .WithMany("Comments")
+                        .HasForeignKey("PostId");
+                });
+
+            modelBuilder.Entity("CasaDaHora.Domain.Post.Post", b =>
+                {
+                    b.HasOne("CasaDaHora.Domain.Account.Account", "Account")
+                        .WithMany("Posts")
+                        .HasForeignKey("AccountId");
                 });
 #pragma warning restore 612, 618
         }

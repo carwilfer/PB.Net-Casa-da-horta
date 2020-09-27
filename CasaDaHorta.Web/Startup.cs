@@ -18,7 +18,7 @@ using CasaDaHorta.Repository.AccountRepository;
 using CasaDaHorta.Services.Account;
 using CasaDaHorta.Repository.Context;
 using CasaDaHorta.CrossCutting.Storage;
-using CasaDaHora.Domain.Amigo;
+
 
 namespace CasaDaHorta.Web
 {
@@ -34,11 +34,11 @@ namespace CasaDaHorta.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddTransient<IAccountRepository, AccountRepository>();
 
             //Controla a parte de conta e perfil
-            services.AddTransient<IUserStore<Accounty>, AccountRepository>();
-            services.AddTransient<IRoleStore<RoleDomain>, RoleRepository>();
+            services.AddTransient<IAccountRepository, AccountRepository>();
+            services.AddTransient<IUserStore<Account>, AccountRepository>();
+            services.AddTransient<IRoleStore<Role>, RoleRepository>();
 
             //Gestor de login com sucesso ou não
             services.AddTransient<IAccountIdentityManager, AccountIdentityManager>();
@@ -50,13 +50,13 @@ namespace CasaDaHorta.Web
             //este aqui busca a conection string do blob store do Azure
             //services.Configure<AzureStorageOptions>(Configuration.GetSection("Microsift.Storage"));
 
-            //services.AddDbContext<CasaDaHortaContext>(opt =>
-            //{
-                //opt.UseSqlServer(Configuration.GetConnectionString("CasaDaHortaConnection"));
-            //});
+            services.AddDbContext<CasaDaHortaContext>(opt =>
+            {
+                opt.UseSqlServer(Configuration.GetConnectionString("CasaDaHortaDb"));
+            });
 
             //controlador de conta e perfil
-            services.AddIdentity<Accounty, Role>()
+            services.AddIdentity<Account, Role>()
                     .AddDefaultTokenProviders();
 
             //para conseguir criar um login e acesso
@@ -66,6 +66,12 @@ namespace CasaDaHorta.Web
                 options.AccessDeniedPath = "/Account/AccessDenied";
                 options.ExpireTimeSpan = TimeSpan.FromMinutes(60);
                 options.ReturnUrlParameter = CookieAuthenticationDefaults.ReturnUrlParameter;
+            });
+
+            services.AddSession(option => {
+                option.Cookie.Name = "Token";
+                option.Cookie.IsEssential = true;
+                option.IOTimeout = TimeSpan.FromMinutes(60);
             });
 
             services.AddControllersWithViews();
@@ -91,7 +97,7 @@ namespace CasaDaHorta.Web
             app.UseStaticFiles();
 
             app.UseRouting();
-
+            app.UseSession();
             app.UseAuthentication();
             app.UseAuthorization();
 

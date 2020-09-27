@@ -26,7 +26,7 @@ namespace CasaDaHorta.API.Controllers
             if (!ModelState.IsValid)
                 return await Task.FromResult(BadRequest(ModelState));
 
-            var token = this.AuthenticateService.AuthenticateAmigoDomain(loginRequest.Email, loginRequest.Password);
+            var token = this.AuthenticateService.AuthenticateUser(loginRequest.Email, loginRequest.Password);
 
             if (String.IsNullOrWhiteSpace(token))
             {

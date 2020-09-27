@@ -1,5 +1,5 @@
-﻿using CasaDaHora.Domain.Amigo;
-using CasaDaHorta.Repository.Amigo;
+﻿using CasaDaHora.Domain.Account.Repository;
+using CasaDaHora.Domain.Account;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System;
@@ -7,44 +7,43 @@ using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace CasaDaHorta.Services
 {
     public class AuthenticateService
     {
-        private AmigoRepository Repository { get; set; }
+        private readonly IAccountRepository _accountRepository;
 
-        private IConfiguration Configuration { get; set; }
+        private readonly IConfiguration _configuration;
 
-        public AuthenticateService(AmigoRepository amigoRepository, IConfiguration configuration)
+        public AuthenticateService(IAccountRepository accountRepository, IConfiguration configurantion)
         {
-            this.Repository = amigoRepository;
-            this.Configuration = configuration;
+            _accountRepository = accountRepository;
+            _configuration = configurantion;
         }
 
-        public string AuthenticateAmigoDomain(string email, string password)
+        public string AuthenticateUser(string email, string password)
         {
-            var amigoDomain = this.Repository.GetAmigoDomainByEmail(email);
+            var account = _accountRepository.GetAccountByEmailPassword(email, password);
 
-            if (amigoDomain == null)
+            if (account.Result == null)
+            {
                 return null;
+            }
 
-            if (amigoDomain.Password != password)
-                return null;
-
-            return CreateToken(amigoDomain);
+            return CreateToken(account);
         }
 
-        private string CreateToken(AmigoDomain amigoDomain)
+        private string CreateToken(Task<CasaDaHora.Domain.Account.Account> account)
         {
-            var key = Encoding.UTF8.GetBytes(this.Configuration["Token:Secret"]);
+            var key = Encoding.UTF8.GetBytes(_configuration["Token:Secret"]);
 
             var claims = new List<Claim>();
 
-            claims.Add(new Claim(JwtRegisteredClaimNames.Sub, amigoDomain.Id.ToString()));
-            claims.Add(new Claim(ClaimTypes.Name, amigoDomain.Nome));
-            claims.Add(new Claim(ClaimTypes.Email, amigoDomain.Email));
-            claims.Add(new Claim("password", amigoDomain.Password));
+            claims.Add(new Claim(JwtRegisteredClaimNames.Sub, account.Result.Id.ToString()));
+            claims.Add(new Claim(ClaimTypes.Email, account.Result.Email));
+            claims.Add(new Claim(ClaimTypes.Name, account.Result.Nome));
 
             var tokenHandler = new JwtSecurityTokenHandler();
 
@@ -53,8 +52,8 @@ namespace CasaDaHorta.Services
                 Subject = new ClaimsIdentity(claims),
                 Expires = DateTime.UtcNow.AddHours(1),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256),
-                Audience = "AmigoDomain-API",
-                Issuer = "AmigoDomain-API"
+                Audience = "CASADAHORTA-API",
+                Issuer = "CASADAHORTA-API"
             };
 
             var securityToken = tokenHandler.CreateToken(tokenDescription);
@@ -63,5 +62,6 @@ namespace CasaDaHorta.Services
 
             return token;
         }
+
     }
 }

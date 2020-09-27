@@ -8,6 +8,7 @@ using CasaDaHorta.Web.Models;
 using CasaDaHorta.Web.ViewModel.Account;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using RestSharp;
 
 namespace CasaDaHorta.Web.Controllers
 {
@@ -38,13 +39,19 @@ namespace CasaDaHorta.Web.Controllers
             try
             {
 
-                var result = await this.AccountIdentityManager.Login(model.UserName, model.Password);
+                var result = await this.AccountIdentityManager.Login(model.Email, model.Password);
 
                 if (!result.Succeeded)
                 {
                     ModelState.AddModelError(string.Empty, "Login ou senha inválidos");
                     return View(model);
                 }
+
+                var client = new RestClient();
+                var request = new RestRequest("http://localhost:52533/api/authenticate/token", DataFormat.Json);
+                request.AddJsonBody(model);
+                var response = client.Post<string>(request);
+                HttpContext.Session.SetString("Token", response.Data);
 
                 if (!String.IsNullOrWhiteSpace(returnUrl))
                     return Redirect(returnUrl);
@@ -58,83 +65,41 @@ namespace CasaDaHorta.Web.Controllers
             }
 
         }
-        // GET: Perfils/Details/5
-        public ActionResult Details(int id)
+        public IActionResult Register()
         {
-            return View();
-        }
-        // GET: Perfils/Create
-        public ActionResult Create()
-        {
+
             return View();
         }
 
-        // POST: Perfils/Create
-        //[HttpPost]
-        //public async Task<ActionResult> Create(PerfilInputModel model, IFormFile foto)
-        //{
-        //    try
-        //    {
-        //        var uri = await ArmazenamentoDeFotos.ArmazenarFotoDePerfil(foto);
 
-        //        model.UrlFoto = uri.AbsoluteUri;
-
-        //        await CasaDaHorta.Api.Post("perfil", model);
-
-        //        return RedirectToAction("index", "home");
-        //    }
-        //    catch (Exception)
-        //    {
-        //        return base.ValidationProblem();
-        //    }
-        //}
-
-        // GET: Perfils/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: Perfils/Edit/5
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public async Task<IActionResult> Register(RegisterViewModel model)
         {
             try
             {
-                // TODO: Add update logic here
-
-                return RedirectToAction(nameof(Index));
+                if (ModelState.IsValid)
+                {
+                    await this.AccountService.Register(model.Nome, model.DataNascimento, model.Email, model.Password);
+                    return Redirect("/");
+                }
+                return View(model);
             }
             catch
             {
-                return View();
+                ModelState.AddModelError(string.Empty, "Ocorreu um erro, por favor tente mais tarde.");
+                return View(model);
             }
         }
 
-        // GET: Perfils/Delete/5
-        public ActionResult Delete(int id)
+        public IActionResult Logout()
         {
-            return View();
-        }
-
-        // POST: Perfils/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
-            try
+            this.AccountIdentityManager.Logout();
+            foreach (var cookie in HttpContext.Request.Cookies)
             {
-                // TODO: Add delete logic here
-
-                return RedirectToAction(nameof(Index));
+                Response.Cookies.Delete(cookie.Key);
             }
-            catch
-            {
-                return View();
-            }
+            return Redirect("/Account/Login");
         }
-
 
     }
 }

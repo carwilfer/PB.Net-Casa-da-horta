@@ -8,6 +8,6 @@ namespace CasaDaHora.Domain.Account
     {
         public Guid Id { get; set; }
         public string Nome { get; set; }
-        public List<Accounty> Accounts { get; set; }
+        public List<Account> Accounts { get; set; }
     }
 }

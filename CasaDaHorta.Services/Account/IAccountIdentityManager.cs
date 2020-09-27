@@ -8,6 +8,7 @@ namespace CasaDaHorta.Services.Account
 {
     public interface IAccountIdentityManager
     {
-        Task<SignInResult> Login(string userName, string password);
+        Task<SignInResult> Login(string email, string password);
+        Task Logout();
     }
 }
