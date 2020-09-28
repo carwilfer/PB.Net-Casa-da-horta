@@ -2727,10 +2727,7 @@
         },
         "runtime": {
           "bin/placeholder/CasaDaHora.Domain.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
+        }
       },
       "CasaDaHorta.CrossCutting/1.0.0": {
         "type": "project",
@@ -2750,10 +2747,7 @@
         },
         "runtime": {
           "bin/placeholder/CasaDaHorta.CrossCutting.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
+        }
       },
       "CasaDaHorta.Repository/1.0.0": {
         "type": "project",
@@ -2778,10 +2772,7 @@
         },
         "runtime": {
           "bin/placeholder/CasaDaHorta.Repository.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
+        }
       },
       "CasaDaHorta.Services/1.0.0": {
         "type": "project",
@@ -2804,10 +2795,7 @@
         },
         "runtime": {
           "bin/placeholder/CasaDaHorta.Services.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
+        }
       }
     }
   },
@@ -8770,23 +8758,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Carlos\\.nuget\\packages\\": {},
+    "C:\\Users\\Jorge\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Carlos\\Desktop\\Projeto de bloco\\PB.CasaDaHorta\\CasaDaHorta.API\\CasaDaHorta.API.csproj",
+      "projectUniqueName": "C:\\Users\\Jorge\\Source\\Repos\\PB.Net-Casa-da-horta\\CasaDaHorta.API\\CasaDaHorta.API.csproj",
       "projectName": "CasaDaHorta.API",
-      "projectPath": "C:\\Users\\Carlos\\Desktop\\Projeto de bloco\\PB.CasaDaHorta\\CasaDaHorta.API\\CasaDaHorta.API.csproj",
-      "packagesPath": "C:\\Users\\Carlos\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Carlos\\Desktop\\Projeto de bloco\\PB.CasaDaHorta\\CasaDaHorta.API\\obj\\",
+      "projectPath": "C:\\Users\\Jorge\\Source\\Repos\\PB.Net-Casa-da-horta\\CasaDaHorta.API\\CasaDaHorta.API.csproj",
+      "packagesPath": "C:\\Users\\Jorge\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Jorge\\Source\\Repos\\PB.Net-Casa-da-horta\\CasaDaHorta.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Carlos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Jorge\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -8800,8 +8788,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\Carlos\\Desktop\\Projeto de bloco\\PB.CasaDaHorta\\CasaDaHorta.Services\\CasaDaHorta.Services.csproj": {
-              "projectPath": "C:\\Users\\Carlos\\Desktop\\Projeto de bloco\\PB.CasaDaHorta\\CasaDaHorta.Services\\CasaDaHorta.Services.csproj"
+            "C:\\Users\\Jorge\\Source\\Repos\\PB.Net-Casa-da-horta\\CasaDaHorta.Services\\CasaDaHorta.Services.csproj": {
+              "projectPath": "C:\\Users\\Jorge\\Source\\Repos\\PB.Net-Casa-da-horta\\CasaDaHorta.Services\\CasaDaHorta.Services.csproj"
             }
           }
         }
@@ -8894,7 +8882,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

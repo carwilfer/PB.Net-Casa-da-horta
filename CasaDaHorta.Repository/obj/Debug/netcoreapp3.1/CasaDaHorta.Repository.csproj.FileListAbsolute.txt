@@ -43,3 +43,20 @@ C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHorta.Repository\o
 C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHorta.Repository\obj\Debug\netcoreapp3.1\CasaDaHorta.Repository.dll
 C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHorta.Repository\obj\Debug\netcoreapp3.1\CasaDaHorta.Repository.pdb
 C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHorta.Repository\obj\Debug\netcoreapp3.1\CasaDaHorta.Repository.genruntimeconfig.cache
+C:\Users\Jorge\Source\Repos\PB.Net-Casa-da-horta\CasaDaHorta.Repository\bin\Debug\netcoreapp3.1\CasaDaHorta.Repository.deps.json
+C:\Users\Jorge\Source\Repos\PB.Net-Casa-da-horta\CasaDaHorta.Repository\bin\Debug\netcoreapp3.1\CasaDaHorta.Repository.runtimeconfig.json
+C:\Users\Jorge\Source\Repos\PB.Net-Casa-da-horta\CasaDaHorta.Repository\bin\Debug\netcoreapp3.1\CasaDaHorta.Repository.runtimeconfig.dev.json
+C:\Users\Jorge\Source\Repos\PB.Net-Casa-da-horta\CasaDaHorta.Repository\bin\Debug\netcoreapp3.1\CasaDaHorta.Repository.dll
+C:\Users\Jorge\Source\Repos\PB.Net-Casa-da-horta\CasaDaHorta.Repository\bin\Debug\netcoreapp3.1\CasaDaHorta.Repository.pdb
+C:\Users\Jorge\Source\Repos\PB.Net-Casa-da-horta\CasaDaHorta.Repository\bin\Debug\netcoreapp3.1\CasaDaHora.Domain.dll
+C:\Users\Jorge\Source\Repos\PB.Net-Casa-da-horta\CasaDaHorta.Repository\bin\Debug\netcoreapp3.1\CasaDaHorta.CrossCutting.dll
+C:\Users\Jorge\Source\Repos\PB.Net-Casa-da-horta\CasaDaHorta.Repository\bin\Debug\netcoreapp3.1\CasaDaHora.Domain.pdb
+C:\Users\Jorge\Source\Repos\PB.Net-Casa-da-horta\CasaDaHorta.Repository\bin\Debug\netcoreapp3.1\CasaDaHorta.CrossCutting.pdb
+C:\Users\Jorge\Source\Repos\PB.Net-Casa-da-horta\CasaDaHorta.Repository\obj\Debug\netcoreapp3.1\CasaDaHorta.Repository.csprojAssemblyReference.cache
+C:\Users\Jorge\Source\Repos\PB.Net-Casa-da-horta\CasaDaHorta.Repository\obj\Debug\netcoreapp3.1\CasaDaHorta.Repository.AssemblyInfoInputs.cache
+C:\Users\Jorge\Source\Repos\PB.Net-Casa-da-horta\CasaDaHorta.Repository\obj\Debug\netcoreapp3.1\CasaDaHorta.Repository.AssemblyInfo.cs
+C:\Users\Jorge\Source\Repos\PB.Net-Casa-da-horta\CasaDaHorta.Repository\obj\Debug\netcoreapp3.1\CasaDaHorta.Repository.csproj.CoreCompileInputs.cache
+C:\Users\Jorge\Source\Repos\PB.Net-Casa-da-horta\CasaDaHorta.Repository\obj\Debug\netcoreapp3.1\CasaDaHorta.Repository.csproj.CopyComplete
+C:\Users\Jorge\Source\Repos\PB.Net-Casa-da-horta\CasaDaHorta.Repository\obj\Debug\netcoreapp3.1\CasaDaHorta.Repository.dll
+C:\Users\Jorge\Source\Repos\PB.Net-Casa-da-horta\CasaDaHorta.Repository\obj\Debug\netcoreapp3.1\CasaDaHorta.Repository.pdb
+C:\Users\Jorge\Source\Repos\PB.Net-Casa-da-horta\CasaDaHorta.Repository\obj\Debug\netcoreapp3.1\CasaDaHorta.Repository.genruntimeconfig.cache

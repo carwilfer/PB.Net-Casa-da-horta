@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Carlos\\Desktop\\Projeto de bloco\\PB.CasaDaHorta\\CasaDaHorta.Tests\\CasaDaHorta.Tests.csproj": {}
+    "C:\\Users\\Jorge\\Source\\Repos\\PB.Net-Casa-da-horta\\CasaDaHorta.Tests\\CasaDaHorta.Tests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Carlos\\Desktop\\Projeto de bloco\\PB.CasaDaHorta\\CasaDaHorta.Tests\\CasaDaHorta.Tests.csproj": {
+    "C:\\Users\\Jorge\\Source\\Repos\\PB.Net-Casa-da-horta\\CasaDaHorta.Tests\\CasaDaHorta.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Carlos\\Desktop\\Projeto de bloco\\PB.CasaDaHorta\\CasaDaHorta.Tests\\CasaDaHorta.Tests.csproj",
+        "projectUniqueName": "C:\\Users\\Jorge\\Source\\Repos\\PB.Net-Casa-da-horta\\CasaDaHorta.Tests\\CasaDaHorta.Tests.csproj",
         "projectName": "CasaDaHorta.Tests",
-        "projectPath": "C:\\Users\\Carlos\\Desktop\\Projeto de bloco\\PB.CasaDaHorta\\CasaDaHorta.Tests\\CasaDaHorta.Tests.csproj",
-        "packagesPath": "C:\\Users\\Carlos\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Carlos\\Desktop\\Projeto de bloco\\PB.CasaDaHorta\\CasaDaHorta.Tests\\obj\\",
+        "projectPath": "C:\\Users\\Jorge\\Source\\Repos\\PB.Net-Casa-da-horta\\CasaDaHorta.Tests\\CasaDaHorta.Tests.csproj",
+        "packagesPath": "C:\\Users\\Jorge\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Jorge\\Source\\Repos\\PB.Net-Casa-da-horta\\CasaDaHorta.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Carlos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Jorge\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -103,7 +103,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

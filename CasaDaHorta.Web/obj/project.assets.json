@@ -2797,10 +2797,7 @@
         },
         "runtime": {
           "bin/placeholder/CasaDaHora.Domain.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
+        }
       },
       "CasaDaHorta.CrossCutting/1.0.0": {
         "type": "project",
@@ -2820,10 +2817,7 @@
         },
         "runtime": {
           "bin/placeholder/CasaDaHorta.CrossCutting.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
+        }
       },
       "CasaDaHorta.Repository/1.0.0": {
         "type": "project",
@@ -2848,10 +2842,7 @@
         },
         "runtime": {
           "bin/placeholder/CasaDaHorta.Repository.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
+        }
       },
       "CasaDaHorta.Services/1.0.0": {
         "type": "project",
@@ -2874,10 +2865,7 @@
         },
         "runtime": {
           "bin/placeholder/CasaDaHorta.Services.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
+        }
       }
     }
   },
@@ -8996,23 +8984,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Carlos\\.nuget\\packages\\": {},
+    "C:\\Users\\Jorge\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Carlos\\Desktop\\Projeto de bloco\\PB.CasaDaHorta\\CasaDaHorta.Web\\CasaDaHorta.Web.csproj",
+      "projectUniqueName": "C:\\Users\\Jorge\\Source\\Repos\\PB.Net-Casa-da-horta\\CasaDaHorta.Web\\CasaDaHorta.Web.csproj",
       "projectName": "CasaDaHorta.Web",
-      "projectPath": "C:\\Users\\Carlos\\Desktop\\Projeto de bloco\\PB.CasaDaHorta\\CasaDaHorta.Web\\CasaDaHorta.Web.csproj",
-      "packagesPath": "C:\\Users\\Carlos\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Carlos\\Desktop\\Projeto de bloco\\PB.CasaDaHorta\\CasaDaHorta.Web\\obj\\",
+      "projectPath": "C:\\Users\\Jorge\\Source\\Repos\\PB.Net-Casa-da-horta\\CasaDaHorta.Web\\CasaDaHorta.Web.csproj",
+      "packagesPath": "C:\\Users\\Jorge\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Jorge\\Source\\Repos\\PB.Net-Casa-da-horta\\CasaDaHorta.Web\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Carlos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Jorge\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -9026,8 +9014,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\Carlos\\Desktop\\Projeto de bloco\\PB.CasaDaHorta\\CasaDaHorta.Services\\CasaDaHorta.Services.csproj": {
-              "projectPath": "C:\\Users\\Carlos\\Desktop\\Projeto de bloco\\PB.CasaDaHorta\\CasaDaHorta.Services\\CasaDaHorta.Services.csproj"
+            "C:\\Users\\Jorge\\Source\\Repos\\PB.Net-Casa-da-horta\\CasaDaHorta.Services\\CasaDaHorta.Services.csproj": {
+              "projectPath": "C:\\Users\\Jorge\\Source\\Repos\\PB.Net-Casa-da-horta\\CasaDaHorta.Services\\CasaDaHorta.Services.csproj"
             }
           }
         }
@@ -9124,7 +9112,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
       }
     }
   },
@@ -9133,7 +9121,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'IdentityServer3 2.6.3' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "message": "O pacote 'IdentityServer3 2.6.3' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' em vez da estrutura de destino do projeto '.NETCoreApp,Version=v3.1'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
       "libraryId": "IdentityServer3",
       "targetGraphs": [
         ".NETCoreApp,Version=v3.1"
@@ -9143,7 +9131,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'Owin 1.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "message": "O pacote 'Owin 1.0.0' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' em vez da estrutura de destino do projeto '.NETCoreApp,Version=v3.1'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
       "libraryId": "Owin",
       "targetGraphs": [
         ".NETCoreApp,Version=v3.1"
