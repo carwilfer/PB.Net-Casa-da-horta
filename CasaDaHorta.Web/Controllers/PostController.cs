@@ -35,7 +35,7 @@ namespace CasaDaHorta.Web.Controllers
             var client = new RestClient();
             var key = HttpContext.Session.GetString("Token");
 
-            var request = new RestRequest("http://localhost:52533/api/posts", DataFormat.Json);
+            var request = new RestRequest("https://localhost:44300/api/posts", DataFormat.Json);
             var response = client.Get<List<Post>>(request.AddHeader("Authorization", "Bearer " + KeyValue(key)));
 
             return View(response.Data);
@@ -47,10 +47,10 @@ namespace CasaDaHorta.Web.Controllers
             var client = new RestClient();
             var key = HttpContext.Session.GetString("Token");
 
-            var request = new RestRequest("http://localhost:52533/api/posts/" + id, DataFormat.Json);
+            var request = new RestRequest("https://localhost:44300/api/posts/" + id, DataFormat.Json);
             var response = client.Get<PostResponse>(request.AddHeader("Authorization", "Bearer " + KeyValue(key)));
 
-            var requestComments = new RestRequest("http://localhost:52533/api/comments/", DataFormat.Json);
+            var requestComments = new RestRequest("https://localhost:44300/api/comments/", DataFormat.Json);
             var responseComments = client.Get<List<Comments>>(requestComments.AddHeader("Authorization", "Bearer " + KeyValue(key)));
 
             List<Comments> listaComments = new List<Comments>();
@@ -87,7 +87,7 @@ namespace CasaDaHorta.Web.Controllers
                 if (ModelState.IsValid)
                 {
                     var client = new RestClient();
-                    var request = new RestRequest("http://localhost:52533/api/posts", DataFormat.Json);
+                    var request = new RestRequest("https://localhost:44300/api/posts", DataFormat.Json);
                     var key = HttpContext.Session.GetString("Token");
 
                     string value = KeyValue(key);
@@ -122,7 +122,7 @@ namespace CasaDaHorta.Web.Controllers
             var client = new RestClient();
             var key = HttpContext.Session.GetString("Token");
 
-            var request = new RestRequest("http://localhost:52533/api/posts/" + id, DataFormat.Json);
+            var request = new RestRequest("https://localhost:44300/api/posts/" + id, DataFormat.Json);
             var response = client.Get<PostViewModels>(request.AddHeader("Authorization", "Bearer " + KeyValue(key)));
 
             return View(response.Data);
@@ -138,7 +138,7 @@ namespace CasaDaHorta.Web.Controllers
                 if (ModelState.IsValid)
                 {
                     var client = new RestClient();
-                    var request = new RestRequest("http://localhost:52533/api/posts/" + id, DataFormat.Json);
+                    var request = new RestRequest("https://localhost:44300/api/posts/" + id, DataFormat.Json);
 
                     model.ImagePost = UploadFotoPost(model.Foto).Result;
 
@@ -164,7 +164,7 @@ namespace CasaDaHorta.Web.Controllers
             var client = new RestClient();
             var key = HttpContext.Session.GetString("Token");
 
-            var request = new RestRequest("http://localhost:52533/api/posts/" + id, DataFormat.Json);
+            var request = new RestRequest("https://localhost:44300/api/posts/" + id, DataFormat.Json);
             var response = client.Get<Post>(request.AddHeader("Authorization", "Bearer " + KeyValue(key)));
 
             return View(response.Data);
@@ -180,7 +180,7 @@ namespace CasaDaHorta.Web.Controllers
                 var client = new RestClient();
 
                 var key = HttpContext.Session.GetString("Token");
-                var request = new RestRequest("http://localhost:52533/api/posts/" + id, DataFormat.Json);
+                var request = new RestRequest("https://localhost:44300/api/posts/" + id, DataFormat.Json);
                 var response = client.Get<Post>(request.AddHeader("Authorization", "Bearer " + KeyValue(key)));
 
                 post = response.Data;
@@ -192,12 +192,12 @@ namespace CasaDaHorta.Web.Controllers
 
                         foreach (var item in post.Comments)
                         {
-                            var requestComments = new RestRequest("http://localhost:52533/api/comments/" + item.Id, DataFormat.Json);
+                            var requestComments = new RestRequest("https://localhost:44300/api/comments/" + item.Id, DataFormat.Json);
 
                             var responseComments = client.Delete<Comments>(requestComments.AddHeader("Authorization", "Bearer " + KeyValue(key)));
                         }
 
-                        request = new RestRequest("http://localhost:52533/api/posts/" + id, DataFormat.Json);
+                        request = new RestRequest("https://localhost:44300/api/posts/" + id, DataFormat.Json);
 
                         response = client.Delete<Post>(request.AddHeader("Authorization", "Bearer " + KeyValue(key)));
 

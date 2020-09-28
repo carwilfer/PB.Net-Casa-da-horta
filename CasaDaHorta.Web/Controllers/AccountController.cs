@@ -47,11 +47,11 @@ namespace CasaDaHorta.Web.Controllers
                     return View(model);
                 }
 
-                //var client = new RestClient();
-                //var request = new RestRequest("http://localhost:52533/api/authenticate/token", DataFormat.Json);
-                //request.AddJsonBody(model);
-                //var response = client.Post<string>(request);
-                //HttpContext.Session.SetString("Token", response.Data);
+                var client = new RestClient();
+                var request = new RestRequest("https://localhost:44300/api/authenticate/token", DataFormat.Json);
+                request.AddJsonBody(model);
+                var response = client.Post<string>(request);
+                HttpContext.Session.SetString("Token", response.Data);
 
                 if (!String.IsNullOrWhiteSpace(returnUrl))
                     return Redirect(returnUrl);
