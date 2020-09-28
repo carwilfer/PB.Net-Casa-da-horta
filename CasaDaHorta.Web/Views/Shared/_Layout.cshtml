@@ -34,6 +34,7 @@
             <div class="navbar-text">
                 <img class="img-profile rounded-circle" src="https://robohash.org/@(this.User.Claims.First(x => x.Type == System.Security.Claims.ClaimTypes.NameIdentifier).Value)?size=30x30&bgset=bg1">
                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">@this.User.Identity.Name?.ToLower()</span>
+                <a asp-controller="Account" asp-action="Logout">Logout</a>
             </div>
         </div>
     </nav>
