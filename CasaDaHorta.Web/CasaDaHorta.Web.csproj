@@ -33,8 +33,4 @@
     <ProjectReference Include="..\CasaDaHorta.Services\CasaDaHorta.Services.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Views\Account\" />
-  </ItemGroup>
-
 </Project>

@@ -1,8 +1,9 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using CasaDaHora.Domain.Account;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
+using System.Text;
 using System.Text.Json.Serialization;
 
 
@@ -16,6 +17,7 @@ namespace CasaDaHorta.Web.ViewModel.Post
         public string Content { get; set; }
         public IFormFile Foto { get; set; }
         public string ImagePost { get; set; }
+
         public CasaDaHora.Domain.Account.Account Account { get; set; }
 
         [JsonIgnore]

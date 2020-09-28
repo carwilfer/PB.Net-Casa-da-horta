@@ -433,3 +433,8 @@ C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHorta.Web\obj\Debu
 C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHorta.Web\obj\Debug\netcoreapp3.1\CasaDaHorta.Web.dll
 C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHorta.Web\obj\Debug\netcoreapp3.1\CasaDaHorta.Web.pdb
 C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHorta.Web\obj\Debug\netcoreapp3.1\CasaDaHorta.Web.genruntimeconfig.cache
+C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHorta.Web\obj\Debug\netcoreapp3.1\Razor\Views\Account\Login.cshtml.g.cs
+C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHorta.Web\obj\Debug\netcoreapp3.1\Razor\Views\Account\Register.cshtml.g.cs
+C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHorta.Web\obj\Debug\netcoreapp3.1\Razor\Views\Post\Create.cshtml.g.cs
+C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHorta.Web\obj\Debug\netcoreapp3.1\Razor\Views\Post\Index.cshtml.g.cs
+C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHorta.Web\obj\Debug\netcoreapp3.1\Razor\Views\Post\Delete.cshtml.g.cs

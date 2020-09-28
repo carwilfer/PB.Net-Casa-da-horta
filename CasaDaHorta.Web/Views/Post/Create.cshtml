@@ -1,0 +1,51 @@
+﻿@model CasaDaHorta.Web.ViewModel.Post.PostViewModels
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+@*@if (ViewBag.UrlGerada != null)
+{
+    <img src="@ViewBag.UrlGerada" />
+    <a href="@ViewBag.UrlGerada" target="_blank">Verificar o arquivo no Azure</a>}
+
+<form asp-action="Create" asp-controller="Upload" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label>Arquivo</label>
+        <input type="file" class="form-control" placeholder="file" name="file" id="file">
+    </div>
+    <button type="submit" class="btn btn-primary">Postar</button>
+</form>*@
+
+<h4>PostViewModels</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Create" enctype="multipart/form-data">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Content" class="control-label"></label>
+                    <input asp-for="Content" class="form-control" />
+                    <span asp-validation-for="Content" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="ImagePost" class="control-label"></label>
+                    <input type="file" name:"ImagePost" class="form-control" accept="image/png, .jpeg, .jpg" />
+                    <span asp-validation-for="ImagePost" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
