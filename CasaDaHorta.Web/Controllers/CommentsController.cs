@@ -28,7 +28,7 @@ namespace CasaDaHorta.Web.Controllers
             var key = HttpContext.Session.GetString("Token");
 
             var request = new RestRequest("https://localhost:44300/api/comments", DataFormat.Json);
-            var response = client.Get<List<Comments>>(request.AddHeader("Authorization", "Bearer " + KeyValue(key)));
+            var response = client.Get<List<Comments>>(request.AddHeader("Authorization", "Bearer " + LimpandoToken(key)));
 
             return View(response.Data);
         }
@@ -40,7 +40,7 @@ namespace CasaDaHorta.Web.Controllers
             var key = HttpContext.Session.GetString("Token");
 
             var request = new RestRequest("https://localhost:44300/api/comments/" + id, DataFormat.Json);
-            var response = client.Get<Comments>(request.AddHeader("Authorization", "Bearer " + KeyValue(key)));
+            var response = client.Get<Comments>(request.AddHeader("Authorization", "Bearer " + LimpandoToken(key)));
 
             return View(response.Data);
         }
@@ -64,9 +64,9 @@ namespace CasaDaHorta.Web.Controllers
                     var requestPost = new RestRequest("https://localhost:44300/api/posts/" + id, DataFormat.Json);
                     var key = HttpContext.Session.GetString("Token");
 
-                    var responsePost = client.Get<Post>(requestPost.AddHeader("Authorization", "Bearer " + KeyValue(key)));
+                    var responsePost = client.Get<Post>(requestPost.AddHeader("Authorization", "Bearer " + LimpandoToken(key)));
 
-                    string value = KeyValue(key);
+                    string value = LimpandoToken(key);
                     var jwt = value;
                     var handler = new JwtSecurityTokenHandler();
                     var token = handler.ReadJwtToken(jwt);
@@ -81,7 +81,7 @@ namespace CasaDaHorta.Web.Controllers
                     var request = new RestRequest("https://localhost:44300/api/comments", DataFormat.Json);
 
                     request.AddJsonBody(model);
-                    var response = client.Post<Comments>(request.AddHeader("Authorization", "Bearer " + KeyValue(key)));
+                    var response = client.Post<Comments>(request.AddHeader("Authorization", "Bearer " + LimpandoToken(key)));
 
                     return Redirect("/");
                 }
@@ -100,7 +100,7 @@ namespace CasaDaHorta.Web.Controllers
             var key = HttpContext.Session.GetString("Token");
 
             var request = new RestRequest("https://localhost:44300/api/comments/" + id, DataFormat.Json);
-            var response = client.Get<Comments>(request.AddHeader("Authorization", "Bearer " + KeyValue(key)));
+            var response = client.Get<Comments>(request.AddHeader("Authorization", "Bearer " + LimpandoToken(key)));
 
             return View(response.Data);
         }
@@ -117,7 +117,7 @@ namespace CasaDaHorta.Web.Controllers
                 request.AddJsonBody(model);
                 var key = HttpContext.Session.GetString("Token");
 
-                var response = client.Put<Comments>(request.AddHeader("Authorization", "Bearer " + KeyValue(key)));
+                var response = client.Put<Comments>(request.AddHeader("Authorization", "Bearer " + LimpandoToken(key)));
 
                 return Redirect("/");
             }
@@ -134,7 +134,7 @@ namespace CasaDaHorta.Web.Controllers
             var key = HttpContext.Session.GetString("Token");
 
             var request = new RestRequest("https://localhost:44300/api/comments/" + id, DataFormat.Json);
-            var response = client.Get<Comments>(request.AddHeader("Authorization", "Bearer " + KeyValue(key)));
+            var response = client.Get<Comments>(request.AddHeader("Authorization", "Bearer " + LimpandoToken(key)));
 
             return View(response.Data);
         }
@@ -150,7 +150,7 @@ namespace CasaDaHorta.Web.Controllers
                 var request = new RestRequest("https://localhost:44300/api/comments/" + id, DataFormat.Json);
                 var key = HttpContext.Session.GetString("Token");
 
-                var response = client.Delete<Comments>(request.AddHeader("Authorization", "Bearer " + KeyValue(key)));
+                var response = client.Delete<Comments>(request.AddHeader("Authorization", "Bearer " + LimpandoToken(key)));
 
                 return Redirect("/");
             }
@@ -160,14 +160,14 @@ namespace CasaDaHorta.Web.Controllers
             }
         }
 
-        public string KeyValue(string key)
+        public string LimpandoToken(string key)
         {
-            string[] peloAmorDeDeusFunciona = key.Split(":");
-            string[] agrVai = peloAmorDeDeusFunciona[1].Split("\\");
-            string[] agrVaiPF = agrVai[0].Split("}");
-            string[] agrVaiPF2 = agrVaiPF[0].Split('"');
+            string[] RetiraDoisPontos = key.Split(":");
+            string[] RetiradoispontosEBarras = RetiraDoisPontos[1].Split("\\");
+            string[] RetiradoispontosEBarrasEChaves = RetiradoispontosEBarras[0].Split("}");
+            string[] RetiradoispontosEBarrasEChavesEChaves = RetiradoispontosEBarrasEChaves[0].Split('"');
 
-            return agrVaiPF2[1];
+            return RetiradoispontosEBarrasEChavesEChaves[1];
         }
     }
 }

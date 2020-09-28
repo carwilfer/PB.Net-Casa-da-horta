@@ -36,7 +36,7 @@ namespace CasaDaHorta.Web.Controllers
             var key = HttpContext.Session.GetString("Token");
 
             var request = new RestRequest("https://localhost:44300/api/posts", DataFormat.Json);
-            var response = client.Get<List<Post>>(request.AddHeader("Authorization", "Bearer " + KeyValue(key)));
+            var response = client.Get<List<Post>>(request.AddHeader("Authorization", "Bearer " + LimpandoToken(key)));
 
             return View(response.Data);
         }
@@ -48,10 +48,10 @@ namespace CasaDaHorta.Web.Controllers
             var key = HttpContext.Session.GetString("Token");
 
             var request = new RestRequest("https://localhost:44300/api/posts/" + id, DataFormat.Json);
-            var response = client.Get<PostResponse>(request.AddHeader("Authorization", "Bearer " + KeyValue(key)));
+            var response = client.Get<PostResponse>(request.AddHeader("Authorization", "Bearer " + LimpandoToken(key)));
 
             var requestComments = new RestRequest("https://localhost:44300/api/comments/", DataFormat.Json);
-            var responseComments = client.Get<List<Comments>>(requestComments.AddHeader("Authorization", "Bearer " + KeyValue(key)));
+            var responseComments = client.Get<List<Comments>>(requestComments.AddHeader("Authorization", "Bearer " + LimpandoToken(key)));
 
             List<Comments> listaComments = new List<Comments>();
 
@@ -90,7 +90,7 @@ namespace CasaDaHorta.Web.Controllers
                     var request = new RestRequest("https://localhost:44300/api/posts", DataFormat.Json);
                     var key = HttpContext.Session.GetString("Token");
 
-                    string value = KeyValue(key);
+                    string value = LimpandoToken(key);
                     var jwt = value;
                     var handler = new JwtSecurityTokenHandler();
                     var token = handler.ReadJwtToken(jwt);
@@ -104,7 +104,7 @@ namespace CasaDaHorta.Web.Controllers
                     model.Account = account.Result;
 
                     request.AddJsonBody(model);
-                    var response = client.Post<Post>(request.AddHeader("Authorization", "Bearer " + KeyValue(key)));
+                    var response = client.Post<Post>(request.AddHeader("Authorization", "Bearer " + LimpandoToken(key)));
 
                     return Redirect("/");
                 }
@@ -123,7 +123,7 @@ namespace CasaDaHorta.Web.Controllers
             var key = HttpContext.Session.GetString("Token");
 
             var request = new RestRequest("https://localhost:44300/api/posts/" + id, DataFormat.Json);
-            var response = client.Get<PostViewModels>(request.AddHeader("Authorization", "Bearer " + KeyValue(key)));
+            var response = client.Get<PostViewModels>(request.AddHeader("Authorization", "Bearer " + LimpandoToken(key)));
 
             return View(response.Data);
         }
@@ -145,7 +145,7 @@ namespace CasaDaHorta.Web.Controllers
                     request.AddJsonBody(model);
                     var key = HttpContext.Session.GetString("Token");
 
-                    var response = client.Put<Post>(request.AddHeader("Authorization", "Bearer " + KeyValue(key)));
+                    var response = client.Put<Post>(request.AddHeader("Authorization", "Bearer " + LimpandoToken(key)));
 
                     return Redirect("/");
                 }
@@ -165,7 +165,7 @@ namespace CasaDaHorta.Web.Controllers
             var key = HttpContext.Session.GetString("Token");
 
             var request = new RestRequest("https://localhost:44300/api/posts/" + id, DataFormat.Json);
-            var response = client.Get<Post>(request.AddHeader("Authorization", "Bearer " + KeyValue(key)));
+            var response = client.Get<Post>(request.AddHeader("Authorization", "Bearer " + LimpandoToken(key)));
 
             return View(response.Data);
         }
@@ -181,7 +181,7 @@ namespace CasaDaHorta.Web.Controllers
 
                 var key = HttpContext.Session.GetString("Token");
                 var request = new RestRequest("https://localhost:44300/api/posts/" + id, DataFormat.Json);
-                var response = client.Get<Post>(request.AddHeader("Authorization", "Bearer " + KeyValue(key)));
+                var response = client.Get<Post>(request.AddHeader("Authorization", "Bearer " + LimpandoToken(key)));
 
                 post = response.Data;
 
@@ -194,12 +194,12 @@ namespace CasaDaHorta.Web.Controllers
                         {
                             var requestComments = new RestRequest("https://localhost:44300/api/comments/" + item.Id, DataFormat.Json);
 
-                            var responseComments = client.Delete<Comments>(requestComments.AddHeader("Authorization", "Bearer " + KeyValue(key)));
+                            var responseComments = client.Delete<Comments>(requestComments.AddHeader("Authorization", "Bearer " + LimpandoToken(key)));
                         }
 
                         request = new RestRequest("https://localhost:44300/api/posts/" + id, DataFormat.Json);
 
-                        response = client.Delete<Post>(request.AddHeader("Authorization", "Bearer " + KeyValue(key)));
+                        response = client.Delete<Post>(request.AddHeader("Authorization", "Bearer " + LimpandoToken(key)));
 
                         transaction.Commit();
                     }
@@ -216,15 +216,17 @@ namespace CasaDaHorta.Web.Controllers
             }
         }
 
-        public string KeyValue(string key)
+        public string LimpandoToken(string key)
         {
-            string[] peloAmorDeDeusFunciona = key.Split(":");
-            string[] agrVai = peloAmorDeDeusFunciona[1].Split("\\");
-            string[] agrVaiPF = agrVai[0].Split("}");
-            string[] agrVaiPF2 = agrVaiPF[0].Split('"');
+            string[] RetiraDoisPontos = key.Split(":");
+            string[] RetiradoispontosEBarras = RetiraDoisPontos[1].Split("\\");
+            string[] RetiradoispontosEBarrasEChaves = RetiradoispontosEBarras[0].Split("}");
+            string[] RetiradoispontosEBarrasEChavesEChaves = RetiradoispontosEBarrasEChaves[0].Split('"');
 
-            return agrVaiPF2[1];
+            return RetiradoispontosEBarrasEChavesEChaves[1];
         }
+
+
 
         private async Task<string> UploadFotoPost(IFormFile foto)
         {
