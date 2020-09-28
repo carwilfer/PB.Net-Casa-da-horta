@@ -439,3 +439,4 @@ C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHorta.Web\obj\Debu
 C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHorta.Web\obj\Debug\netcoreapp3.1\Razor\Views\Post\Index.cshtml.g.cs
 C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHorta.Web\obj\Debug\netcoreapp3.1\Razor\Views\Post\Delete.cshtml.g.cs
 C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHorta.Web\obj\Debug\netcoreapp3.1\Razor\Views\Post\Details.cshtml.g.cs
+C:\Users\Carlos\Desktop\Projeto de bloco\PB.CasaDaHorta\CasaDaHorta.Web\obj\Debug\netcoreapp3.1\Razor\Views\Post\Edit.cshtml.g.cs
